@@ -13,5 +13,5 @@ alias readmeinit="cp ~/dotfiles/static/README_template.md ./README.md"
 alias licenseinit="cp ~/dotfiles/static/LICENSE.txt ./LICENSE.txt"
 
 # Change Directory
-sota1235="cd ~/Documents/sota1235"
-github="cd ~/Documents/sota1235/github"
+alias sota1235="cd ~/Documents/sota1235"
+alias github="cd ~/Documents/sota1235/github"
