@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Start install the dotfiles"
+
+rm ~/.gitignore && ln -s `pwd`/gitignore ~/.gitignore
+rm ~/.gitconfig && ln -s `pwd`/gitconfig ~/.gitconfig
+
+echo "Installation is completed"
