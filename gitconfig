@@ -8,5 +8,6 @@
   interactive = auto
   grep        = auto
 [core]
+  editor       = vim 
   excludesfile = ~/.gitignore
   autocrlf     = input
