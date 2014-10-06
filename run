@@ -2,7 +2,8 @@
 
 echo "Start install the dotfiles"
 
-rm ~/.gitignore && ln -s `pwd`/gitignore ~/.gitignore
-rm ~/.gitconfig && ln -s `pwd`/gitconfig ~/.gitconfig
+rm ~/.gitignore && cp `pwd`/gitignore ~/.gitignore
+rm ~/.gitconfig && cp `pwd`/gitconfig ~/.gitconfig
+cat `pwd`/zsh/alias.zsh >> ~/.zshrc
 
 echo "Installation is completed"
