@@ -25,3 +25,6 @@ alias licenseinit="cp ~/dotfiles/static/LICENSE.txt ./LICENSE.txt"
 # Change Directory
 alias sota1235="cd ~/Documents/sota1235"
 alias github="cd ~/Documents/sota1235/github"
+
+# Others
+alias grep="grep --color"
