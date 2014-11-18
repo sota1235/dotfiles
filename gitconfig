@@ -8,6 +8,10 @@
   interactive = auto
   grep        = auto
 [core]
-  editor       = vim 
+  editor       = vim
   excludesfile = ~/.gitignore
   autocrlf     = input
+[alias]
+  st = status
+  co = checkout
+  today = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\"'"
