@@ -4,10 +4,13 @@ echo "Start install the dotfiles"
 
 # backup the git files
 cp ~/.gitconfig ~/.gitconfig.backup
+cp ~/.gitconfig_local ~/.gitconfig_local.backup
 cp ~/.gitignore ~/.gitignore.backup
+
 # make the git files
 rm ~/.gitignore && cp `pwd`/gitignore ~/.gitignore
 rm ~/.gitconfig && cp `pwd`/gitconfig ~/.gitconfig
+rm ~/.gitconfig_local && `pwd`/gitconfig_local ~/.gitconfig_local
 
 # include alias.zsh
 echo "source `pwd`/zsh/alias.zsh" >> ~/.zshrc
