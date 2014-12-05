@@ -1,6 +1,5 @@
-[user]
-  name  = sota1235
-  email = t11460ss@sfc.keio.ac.jp
+[include]
+  path = ~/.gitconfig_local
 [color]
   status      = auto
   diff        = auto
@@ -14,4 +13,6 @@
 [alias]
   st = status
   co = checkout
+  ci = commit
+  wc = whatchanged
   today = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\"'"
