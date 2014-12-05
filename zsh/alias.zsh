@@ -32,3 +32,4 @@ alias newpost="middleman article"
 
 # Others
 alias grep="grep --color"
+alias e="exit"
