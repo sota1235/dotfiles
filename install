@@ -13,6 +13,6 @@ rm ~/.gitconfig && cp `pwd`/gitconfig ~/.gitconfig
 rm ~/.gitconfig_local && `pwd`/gitconfig_local ~/.gitconfig_local
 
 # include alias.zsh
-echo "source `pwd`/zsh/alias.zsh" >> ~/.zshrc
+echo "source `pwd`/zsh/alias" >> ~/.zshrc
 
 echo "Installation is completed"
