@@ -11,7 +11,7 @@
   excludesfile = ~/.gitignore
   autocrlf     = input
 [alias]
-  st = status
+  st = status -sb
   co = checkout
   ci = commit
   wc = whatchanged
