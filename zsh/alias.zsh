@@ -31,5 +31,6 @@ alias blog="cd ~/Documents/sota1235/Now_Running/blog"
 alias newpost="middleman article"
 
 # Others
-alias grep="grep --color -n "
+alias grep="grep --color -n"
+alias find_grep="find ./ -type f -print | xargs grep -n"
 alias e="exit"
