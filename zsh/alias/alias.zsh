@@ -1,5 +1,8 @@
 #!/usr/bin/zsh
 
+# include functions
+source ~/.dotfiles/zsh/alias/functions.zsh
+
 ## Suffix aliases ##
 alias -s py=python
 alias -s rb=ruby
@@ -31,6 +34,7 @@ alias blog="cd ~/Documents/sota1235/Now_Running/blog"
 alias newpost="middleman article"
 
 # Others
+alias rm="rmf"
 alias grep="grep --color -n"
 alias find_grep="find ./ -type f -print | xargs grep -n"
 alias e="exit"
