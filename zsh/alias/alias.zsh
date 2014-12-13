@@ -12,6 +12,9 @@ alias -s js=node
 alias -s coffee=coffee
 alias -s txt=vim
 
+## Global aliases ##
+alias -g @g='| grep'
+
 ## Normal Alias ##
 # Remote Login
 alias sota="ssh sota@sota1235.net"
