@@ -1,7 +1,16 @@
 #!/bin/sh
 
+function cecho { echo -e "\e[34m$*\e[m"; }
+
 echo "Start install the dotfiles"
 
+###
+#
+# Git Setup
+#
+###
+
+cecho "Startgin git setup"
 # backup the git files
 cp ~/.gitconfig ~/.gitconfig.backup
 cp ~/.gitconfig_local ~/.gitconfig_local.backup
@@ -10,7 +19,19 @@ cp ~/.gitignore ~/.gitignore.backup
 # make the git files
 rm ~/.gitignore && cp `pwd`/gitfiles/gitignore ~/.gitignore
 rm ~/.gitconfig && cp `pwd`/gitfiles/gitconfig ~/.gitconfig
-rm ~/.gitconfig_local && `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
+
+# make original gitconfig_local file
+GIT_NAME=""
+GIT_MAIL=""
+cecho "Please enter your GitHub name"
+read GIT_NAME
+cecho "Please enter your GitHub e-mail address"
+read GIT_MAIL
+
+rm ~/.gitconfig_local && \
+  sed s/{git_login_name}/${GIT_NAME}/g    `pwd`/gitfiles/gitconfig_local | \
+  sed s/{git_email_address}/${GIT_MAIL}/g `pwd`/gitfiles/gitconfig_local   \
+  > ~/.gitconfig_local
 
 # include alias.zsh
 echo "source `pwd`/zsh/alias.zsh" >> ~/.zshrc
