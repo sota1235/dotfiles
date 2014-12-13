@@ -4,13 +4,17 @@
 source ~/.dotfiles/zsh/alias/functions.zsh
 
 ## Suffix aliases ##
+# script language
 alias -s py=python
 alias -s rb=ruby
 alias -s php=php
 alias -s pl=perl
 alias -s js=node
 alias -s coffee=coffee
+# others
 alias -s txt=vim
+alias -s md="open -a Mou"
+alias -s markdown="open -a Mou"
 
 ## Global aliases ##
 alias -g @g='| grep'
