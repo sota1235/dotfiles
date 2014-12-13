@@ -8,9 +8,9 @@ cp ~/.gitconfig_local ~/.gitconfig_local.backup
 cp ~/.gitignore ~/.gitignore.backup
 
 # make the git files
-rm ~/.gitignore && cp `pwd`/gitignore ~/.gitignore
-rm ~/.gitconfig && cp `pwd`/gitconfig ~/.gitconfig
-rm ~/.gitconfig_local && `pwd`/gitconfig_local ~/.gitconfig_local
+rm ~/.gitignore && cp `pwd`/gitfiles/gitignore ~/.gitignore
+rm ~/.gitconfig && cp `pwd`/gitfiles/gitconfig ~/.gitconfig
+rm ~/.gitconfig_local && `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
 
 # include alias.zsh
 echo "source `pwd`/zsh/alias" >> ~/.zshrc
