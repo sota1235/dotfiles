@@ -1,3 +1,11 @@
+### History ###
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt extended_history
+setopt share_history
+setopt hist_reduce_blanks
+
 # 空Enterした時にls, git status -sbを順番に実行する
 # Thanks for http://qiita.com/znz/items/559721cbf238d77de6bb
 function my_enter {
