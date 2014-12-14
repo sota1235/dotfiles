@@ -51,6 +51,7 @@ alias newpost="middleman article"
 alias rm="rmf"
 alias grep="grep --color -n"
 alias find_grep="find ./ -type f -print | xargs grep -n"
+alias history="history -E"
 
 alias e="exit"
 alias g="git"
