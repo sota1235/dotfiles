@@ -1,6 +1,9 @@
 #!/bin/zsh
 
+###
 # move files to ~/.Trash
+###
+
 function rmf() {
   for file in $*
   do
@@ -35,4 +38,12 @@ if ! [ -d ~/.Trash/ ]
   else
     echo "No such file or directory: $file"
   fi
+}
+
+###
+# grep sjis
+###
+
+function sjis_grep() {
+  grep `echo $1 | nkf -s` $2 | nkf -w
 }
