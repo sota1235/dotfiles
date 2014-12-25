@@ -11,10 +11,11 @@ echo "Start install the dotfiles"
 ###
 
 cecho "Startgin git setup"
+
 # backup the git files
-cp ~/.gitconfig ~/.gitconfig.backup
+cp ~/.gitconfig       ~/.gitconfig.backup
 cp ~/.gitconfig_local ~/.gitconfig_local.backup
-cp ~/.gitignore ~/.gitignore.backup
+cp ~/.gitignore       ~/.gitignore.backup
 
 # make the git files
 rm ~/.gitignore && cp `pwd`/gitfiles/gitignore ~/.gitignore
@@ -33,7 +34,19 @@ rm ~/.gitconfig_local && \
   sed s/{git_email_address}/${GIT_MAIL}/g `pwd`/gitfiles/gitconfig_local   \
   > ~/.gitconfig_local
 
+###
+#
+# Zsh Setup
+#
+###
+
 # include alias.zsh
+cecho "Starting zsh setup"
+
+# backup the zsh files
+cp ~/.zshrc  ~/.zshrc.backup
+cp ~/.zshenv ~/.zshenv.backup
+
 echo "source `pwd`/zsh/alias.zsh" >> ~/.zshrc
 
 echo "Installation is completed"
