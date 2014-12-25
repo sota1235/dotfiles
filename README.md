@@ -10,9 +10,9 @@ dotfiles for sota1235's Macbook Air (Mac OS X 10.9)
 ### Install
 
 ```
-git clone git@github.com:sota1235/dotfiles.git ~/dotfiles
+git clone git@github.com:sota1235/dotfiles.git ~/.dotfiles
 
-cd ~/dotfiles
+cd ~/.dotfiles
 
 ./install
 ```
