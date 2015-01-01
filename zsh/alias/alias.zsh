@@ -32,6 +32,19 @@ alias sota="ssh sota@sota1235.net"
 alias t11460ss="ssh t11460ss@ccx00.sfc.keio.ac.jp"
 alias webedit="ssh t11460ss@webedit.sfc.keio.ac.jp"
 
+# Super user
+alias _="sudo"
+alias please="sudo"
+
+# Basic directory operations
+alias ...="cd ../.."
+
+# List derectory contents
+alias lsa='ls -lah'
+alias l='ls -lh'
+alias ll='ls -lh'
+alias la='ls lAh'
+
 # Editor
 alias vi="vim"
 
