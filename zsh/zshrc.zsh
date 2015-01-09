@@ -1,29 +1,62 @@
-# 空Enterした時にls, git status -sbを順番に実行する
-# Thanks for http://qiita.com/znz/items/559721cbf238d77de6bb
-function my_enter {
-  if [[ -n "$BUFFER" ]]; then
-    builtin zle .accept-line
-    return 0
-  fi
-  if [ "$WIDGET" != "$LASTWIDGET" ]; then
-    MY_ENTER_COUNT=0
-  fi
-  case $[MY_ENTER_COUNT++] in
-    0)
-      BUFFER=" ls"
-      ;;
-    1)
-      if [[ -d .svn ]]; then
-        BUFFER=" svn status"
-      elif git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-        BUFFER=" git status -sb"
-      fi
-      ;;
-    *)
-      unset MY_ENTER_COUNT
-      ;;
-  esac
-  builtin zle .accept-line
-}
+
+# 色を使用できるようにする
+autoload -Uz colors
+colors
+
+###
+# 補完
+###
+
+# 補完機能を有効にする
+autoload -Uz compinit
+compinit
+
+# 補完で小文字/大文字にマッチさせる
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# ../ の後は今いるディレクトリを補完しない
+zstyle ':completion:*' ignore-parents parent pwd ..
+
+# sudo の後ろでコマンド名を補完する
+zstyle ':completion:*:sudo:*' command-path /user/local/sbin /usr/local/bin \
+  /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+
+# ps コマンドのプロセス名補完
+zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
+###
+# オプション
+###
+
+# 日本語ファイル名を表示可能にする
+setopt print_eight_bit
+
+# ディレクトリ名だけでcdする
+setopt auto_cd
+
+# cd したら自動的にpushdする
+setopt auto_pushd
+# 重複したディレクトリを追加しない
+setopt pushd_ignore_dups
+
+# 高機能なワイルドカード展開を使用する
+setopt extended_glob
+
+###
+#
+# History
+#
+###
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt extended_history
+setopt share_history
+setopt hist_reduce_blanks
+
+# read functions
+source ~/.dotfiles/zsh/functions/keybind.zsh
 zle -N my_enter
 bindkey '^m' my_enter
+
+source ~/.dotfiles/zsh/alias/alias.zsh

@@ -34,6 +34,7 @@ rm ~/.gitconfig_local && \
   sed s/{git_email_address}/${GIT_MAIL}/g `pwd`/gitfiles/gitconfig_local   \
   > ~/.gitconfig_local
 
+<<<<<<< HEAD
 ###
 #
 # Zsh Setup
@@ -49,4 +50,6 @@ cp ~/.zshenv ~/.zshenv.backup
 
 echo "source `pwd`/zsh/alias.zsh" >> ~/.zshrc
 
+=======
+>>>>>>> e0c9c9b616bc9de9567dc2c51e63138372f31deb
 echo "Installation is completed"
