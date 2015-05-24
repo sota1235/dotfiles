@@ -8,6 +8,7 @@
   grep        = auto
 [core]
   editor       = vim
+  pager        = less
   excludesfile = ~/.gitignore
   autocrlf     = input
 [alias]
