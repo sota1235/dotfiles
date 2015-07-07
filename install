@@ -47,4 +47,18 @@ cecho "Starting zsh setup"
 cp ~/.zshrc  ~/.zshrc.backup
 cp ~/.zshenv ~/.zshenv.backup
 
-echo "Installation is completed"
+###
+#
+# tmux Setup
+#
+###
+
+cecho "Startgin tmux setup"
+
+# backup .tmux.conf
+cp ~/.tmux.conf ~/.tmux.conf.backup
+
+# cp tmux.conf
+cp /tmux/tmux.conf ~/.tmux.conf
+
+cecho "Installation is completed"
