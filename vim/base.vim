@@ -20,3 +20,6 @@ if(!empty(neobundle$get_not_installed_bundle_names())
     source ~/.vimrc
   endif
 end
+
+" その他もろもろ
+set number
