@@ -3,6 +3,8 @@ dotfiles
 
 dotfiles for sota1235's Macbook Air (Mac OS X 10.9)
 
+現在CentOS7用に改造中…
+
 ### Description
 
 発展途上Dotfiles
