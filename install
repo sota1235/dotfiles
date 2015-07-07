@@ -5,9 +5,7 @@ function cecho { echo -e "\e[34m$*\e[m"; }
 echo "Start install the dotfiles"
 
 ###
-#
 # Git Setup
-#
 ###
 
 cecho "Startgin git setup"
@@ -35,9 +33,7 @@ rm ~/.gitconfig_local && \
   > ~/.gitconfig_local
 
 ###
-#
 # Zsh Setup
-#
 ###
 
 # include alias.zsh
@@ -48,9 +44,7 @@ cp ~/.zshrc  ~/.zshrc.backup
 cp ~/.zshenv ~/.zshenv.backup
 
 ###
-#
 # tmux Setup
-#
 ###
 
 cecho "Startgin tmux setup"

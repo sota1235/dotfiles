@@ -43,9 +43,7 @@ setopt pushd_ignore_dups
 setopt extended_glob
 
 ###
-#
 # History
-#
 ###
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
