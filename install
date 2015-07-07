@@ -47,7 +47,7 @@ cp ~/.zshenv ~/.zshenv.backup
 # tmux Setup
 ###
 
-cecho "Startgin tmux setup"
+cecho "Startging tmux setup"
 
 # backup .tmux.conf
 cp ~/.tmux.conf ~/.tmux.conf.backup
