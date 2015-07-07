@@ -2,10 +2,6 @@ Host sota1235.net
     HostName      sota1235.net
     IdentityFile  ~/.ssh/hoge
     User          hoge
-Host ccx00.sfc.keio.ac.jp
-    HostName      ccx00.sfc.keio.ac.jp
-    IdentityFile  ~/.ssh/moge
-    User          t11460ss
 Host github
     HostName      github.com
     IdentityFile  ~/.ssh/fuga
