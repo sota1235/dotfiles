@@ -1,4 +1,16 @@
-.DS_Store
+# for All
 *.swp
+*~
+
+# Ruby
+/.bundle
+/vendor/bundle
+
+# Node.js
 node_modules
-Gemfile.lock
+
+# bower
+bower_components
+
+# OS X
+DS_Store
