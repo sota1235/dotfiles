@@ -12,15 +12,15 @@
   excludesfile = ~/.gitignore
   autocrlf     = input
 [alias]
+  l   = log
   st  = status
   sst = status -s -b
   co  = checkout
   ci  = commit
   wc  = whatchanged
   alias     = "!sh 'git config --list | grep ^alias. | cut -c 7-'"
-  log-1     = log --oneline
-  log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
-  log-all   = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  l-1     = log --oneline
+  l-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+  l-all   = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
   today     = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\"'"
-  po  = push origin
   pom = push origin master
