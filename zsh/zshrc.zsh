@@ -1,14 +1,36 @@
-
-# 色を使用できるようにする
-autoload -Uz colors
-colors
-
 ###
 # ログイン時
 ###
 
 # tmuxを起動する
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
+###
+# プロンプト設定
+###
+
+# 色を使用できるようにする
+autoload -Uz colors; colors
+
+# もしかして機能
+setopt correct
+
+# PCRE互換の正規表現を使う
+setopt re_match_pcre
+
+# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
+setopt prompt_subst
+
+# プロンプト指定
+PROMPT="
+[%n] %{${fg[yellow]}%}%~%{${reset_color}%}
+%(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(*'-') <!(*;-;)? <)%{${reset_color}%} "
+
+# プロンプト指定(コマンドの続き)
+PROMPT2 = '[%n]> '
+
+# もしかして時のプロンプト指定
+PROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
 
 ###
 # 補完
