@@ -12,11 +12,21 @@ endif
 set nocompatible
 filetype off
 if has('vim_starting')
+  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+    echo "install neobundle..."
+    " vimからシステムコマンドでclone
+    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#begin(expand('~/.vim/bundle/'))
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+let g:neobundle_default_git_protocol='https'
 "set rtp+=~/.vim/vundle/
 "#call vundle#rc()
+
+" NeobundleでNeobundleを管理
+NeoBundle 'Shougo/neobundle.vim'
+
 " Program
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'AnsiEsc.vim'
@@ -63,6 +73,9 @@ NeoBundle 'Shougo/vimproc', {
 call neobundle#end()
 
 filetype plugin indent on
+
+" 未インストールのバンドルがあるかチェック
+NeoBundleCheck
 
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
