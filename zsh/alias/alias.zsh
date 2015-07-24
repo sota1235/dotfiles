@@ -44,7 +44,7 @@ alias ...="cd ../.."
 alias lsa='ls -lah'
 alias l='ls -lh'
 alias ll='ls -lh'
-alias la='ls lAh'
+alias la='ls -lAh'
 
 # Editor
 alias vi="vim"
