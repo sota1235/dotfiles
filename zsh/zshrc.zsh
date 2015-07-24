@@ -283,3 +283,28 @@ bindkey '^m' my_enter
 
 # alias読み込み
 source ~/.dotfiles/zsh/alias/alias.zsh
+
+###
+# Setup
+###
+
+### rbenv ###
+export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bash_profile
+eval "$(rbenv init -)" >> ~/.bash_profile
+
+### pecoc ###
+n peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
