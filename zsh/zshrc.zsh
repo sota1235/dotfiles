@@ -67,11 +67,20 @@ SPROMPT="%{$fg_bold[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg_bo
 autoload -Uz compinit
 compinit
 
+# 補完候補をハイライトする
+zstyle ':completion:*:default' menu select=2
+
 # 補完で小文字/大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # ../ の後は今いるディレクトリを補完しない
 zstyle ':completion:*' ignore-parents parent pwd ..
+
+# ディレクトリ名を補完すると、末尾がスラッシュになる
+setopt auto_param_slash
+
+# 補完候補がない時にbeep音を鳴らさない
+setopt no_beep
 
 # sudo の後ろでコマンド名を補完する
 zstyle ':completion:*:sudo:*' command-path /user/local/sbin /usr/local/bin \
@@ -92,11 +101,17 @@ setopt auto_cd
 
 # cd したら自動的にpushdする
 setopt auto_pushd
+
 # 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
 
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
+
+## 全てのユーザのログイン・ログアウトを監視
+watch="all"
+# ログイン時に表示
+log
 
 ###
 # History
