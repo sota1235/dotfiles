@@ -24,13 +24,13 @@ setopt prompt_subst
 # プロンプト指定
 PROMPT="
 [%n] %{${fg[yellow]}%}%~%{${reset_color}%}
-%(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(*'-') <!(*;-;)? <)%{${reset_color}%} "
+%(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
 
 # プロンプト指定(コマンドの続き)
-PROMPT2 = '[%n]> '
+PROMPT2='[%n]> '
 
 # もしかして時のプロンプト指定
-PROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
+SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
 
 ###
 # 補完
