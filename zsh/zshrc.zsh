@@ -4,6 +4,13 @@ autoload -Uz colors
 colors
 
 ###
+# ログイン時
+###
+
+# tmuxを起動する
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
+###
 # 補完
 ###
 
