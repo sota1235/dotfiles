@@ -11,7 +11,9 @@ echo "(*'-') < Start install the dotfiles"
 cecho "Starting Vim setup"
 
 # backup the vim files
-cp ~/.vimrc ~/.vimrc.backup
+if [ -e ~/.vimrc ]; then
+  cp ~/.vimrc ~/.vimrc.backup
+fi
 
 # make the vim files
 cp `pwd`/vim/vimrc ~/.vimrc
@@ -23,13 +25,19 @@ cp `pwd`/vim/vimrc ~/.vimrc
 cecho "Starting Git setup"
 
 # backup the git files
-cp ~/.gitconfig       ~/.gitconfig.backup
-cp ~/.gitconfig_local ~/.gitconfig_local.backup
-cp ~/.gitignore       ~/.gitignore.backup
+if [ -e ~/.gitconfig ]; then
+  cp ~/.gitconfig ~/.gitconfig.backup
+fi
+if [ -e ~/.gitconfig_local ]; then
+  cp ~/.gitconfig_local ~/.gitconfig_local.backup
+fi
+if [ -e ~/.gitignore ]; then
+  cp ~/.gitignore ~/.gitignore.backup
+fi
 
 # make the git files
-rm ~/.gitignore && cp `pwd`/gitfiles/gitignore ~/.gitignore
-rm ~/.gitconfig && cp `pwd`/gitfiles/gitconfig ~/.gitconfig
+cp `pwd`/gitfiles/gitignore ~/.gitignore
+cp `pwd`/gitfiles/gitconfig ~/.gitconfig
 
 # make original gitconfig_local file
 GIT_NAME=""
@@ -39,10 +47,9 @@ read GIT_NAME
 cecho "Please enter your GitHub e-mail address"
 read GIT_MAIL
 
-rm ~/.gitconfig_local && \
-  sed s/{git_login_name}/${GIT_NAME}/g    `pwd`/gitfiles/gitconfig_local | \
-  sed s/{git_email_address}/${GIT_MAIL}/g `pwd`/gitfiles/gitconfig_local   \
-  > ~/.gitconfig_local
+cp `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
+  sed -i s/{git_user_name}/${GIT_NAME}/g    ~/.gitconfig_local | \
+  sed -i s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
 
 ###
 # Zsh Setup
@@ -52,8 +59,12 @@ rm ~/.gitconfig_local && \
 cecho "Starting zsh setup"
 
 # backup the zsh files
-cp ~/.zshrc  ~/.zshrc.backup
-cp ~/.zshenv ~/.zshenv.backup
+if [ -e ~/.zshrc ]; then
+  cp ~/.zshrc  ~/.zshrc.backup
+fi
+if [ -e ~/.zshenv ]; then
+  cp ~/.zshenv ~/.zshenv.backup
+fi
 
 ###
 # tmux Setup
@@ -62,9 +73,11 @@ cp ~/.zshenv ~/.zshenv.backup
 cecho "Startging tmux setup"
 
 # backup .tmux.conf
-cp ~/.tmux.conf ~/.tmux.conf.backup
+if [ -e ~/.tmux.conf ]; then
+  cp ~/.tmux.conf ~/.tmux.conf.backup
+fi
 
 # cp tmux.conf
-cp /tmux/tmux.conf ~/.tmux.conf
+cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
 cecho "Installation is completed"
