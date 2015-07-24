@@ -37,13 +37,13 @@ zstyle ":vcs_info:*" enable git # gitのみ有効にする
 zstyle ":vcs_info:git:*" check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "✚" # %c
 zstyle ':vcs_info:git:*' unstagedstr "✖"  # %u
-zstyle ':vcs_info:git:*' formats "(%s):[%b] %c%u"
+zstyle ':vcs_info:git:*' formats "(%s):%F{blue}[%f%F{red}%b%f%F{blue}]%f %c%u"
 zstyle ':vcs_info:git:*' actionformats "(%s):[%b]" "%m" "<!%a>"
 
 if is-at-least 4.3.10; then
     # git 用のフォーマット
     # git のときはステージしているかどうかを表示
-    zstyle ':vcs_info:git:*' formats '(%s):[%b]' '%c%u %m'
+    zstyle ':vcs_info:git:*' formats '(%s):%F{blue}[%f%F{red}%b%f%F{blue}]%f' '%c%u %m'
     zstyle ':vcs_info:git:*' actionformats '(%s):[%b]' '%c%u %m' '<!%a>'
     zstyle ':vcs_info:git:*' check-for-changes true
     zstyle ':vcs_info:git:*' stagedstr "✚"    # %c で表示する文字列
