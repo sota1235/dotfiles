@@ -32,8 +32,8 @@ setopt prompt_subst
 
 # プロンプト指定
 ret_status=" \
-%{${fg[yellow]}%}%~%{${reset_color}%}\
-%(?.%{$fg[green]%}.%{$fg[blue]%}) %(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
+%{${fg_bold[yellow]}%}%~%{${reset_color}%}\
+%(?.%{$fg_bold[green]%}.%{$fg_bold[blue]%}) %(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
 
 PROMPT="$ret_status"
 RPROMPT="${vcs_info_msg_0_}"
@@ -42,7 +42,7 @@ RPROMPT="${vcs_info_msg_0_}"
 PROMPT2='[%n]> '
 
 # もしかして時のプロンプト指定
-SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
+SPROMPT="%{$fg_bold[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg_bold[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
 
 ###
 # 補完
