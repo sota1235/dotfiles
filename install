@@ -2,7 +2,7 @@
 
 function cecho { echo -e "\e[34m$*\e[m"; }
 
-echo "Start install the dotfiles"
+echo "(*'-') < Start install the dotfiles"
 
 ###
 # Vim Setup
