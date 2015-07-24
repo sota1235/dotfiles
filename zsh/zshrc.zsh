@@ -284,6 +284,13 @@ bindkey '^m' my_enter
 # alias読み込み
 source ~/.dotfiles/zsh/alias/alias.zsh
 
+# directory色付け
+if [ -x "`which dircolors`" ]; then
+  eval $(dircolors ~/.dotfiles/zsh/lib/dircolors.ansi-universal)
+elif [ -x "`which gdircolors`" ]; then
+  eval $(gdircolors ~/.dotfiles/zsh/lib/dircolors.ansi-universal)
+fi
+
 ###
 # Setup
 ###
