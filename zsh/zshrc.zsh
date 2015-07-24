@@ -24,7 +24,7 @@ zstyle ":vcs_info:*" enable git # gitのみ有効にする
 zstyle ":vcs_info:git:*" check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}✗" # %c
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}✗"  # %u
-zstyle ':vcs_info:git:*' formats "%F{green}(%s)-[%b] %c%u%f"
+zstyle ':vcs_info:git:*' formats "%F{green}(%s):[%b] %c%u%f"
 function _update_vcs_info_msg() {
   LANG=en_US.UTF-8 vcs_info
   if [[ -z ${vcs_info_msg_0_} ]]; then
@@ -57,7 +57,7 @@ RPROMPT="${vcs_info_msg_0_}"
 PROMPT2='[%n]> '
 
 # もしかして時のプロンプト指定
-SPROMPT="%{$fg_bold[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg_bold[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
+SPROMPT="%{$fg_bold[red]%}%{$suggest%}(・´ｰ・｀%)? < もしかして %B%r%b %{$fg_bold[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
 
 ###
 # 補完
