@@ -15,6 +15,9 @@ bindkey -e
 # 色を使用できるようにする
 autoload -Uz colors; colors
 
+# hook関数を登録できるようにする
+autoload -Uz add-zsh-hook
+
 # リポジトリの情報をとれるようにする
 autoload -Uz vcs_info
 zstyle ":vcs_info:*" enable git # gitのみ有効にする
@@ -22,7 +25,15 @@ zstyle ":vcs_info:git:*" check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}✗" # %c
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}✗"  # %u
 zstyle ':vcs_info:git:*' formats "%F{green}(%s)-[%b] %c%u%f"
-precmd () { vcs_info }
+function _update_vcs_info_msg() {
+  LANG=en_US.UTF-8 vcs_info
+  if [[ -z ${vcs_info_msg_0_} ]]; then
+    RPROMPT=""
+  else
+    [[ -n "$vcs_info_msg_0_" ]] && RPROMPT=${vcs_info_msg_0_}
+  fi
+}
+add-zsh-hook precmd _update_vcs_info_msg
 
 # もしかして機能
 setopt correct
