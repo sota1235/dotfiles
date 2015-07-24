@@ -1,13 +1,34 @@
 dotfiles
 ====
 
-dotfiles for sota1235's Macbook Air (Mac OS X 10.9)
-
-現在CentOS7用に改造中…
+dotfiles
 
 ### Description
 
-発展途上Dotfiles
+発展途上dotfiles
+
+主に以下のものの使い勝手をよくしようとしてます。
+
+- zsh
+- git
+- vim
+- tmux
+
+### Usage
+
+- zsh
+
+![](http://i.gyazo.com/e8faba2349639c142420fe3ddbfd0e9f.png)
+
+- vim
+
+Thanks for [nikezono/dotfiles](https://github.com/nikezono/dotfiles)
+
+![](http://i.gyazo.com/3f9c2e3c350654d5ec8572509278465f.png)
+
+- tmux
+
+![](http://i.gyazo.com/2455b942d346b34a594c5ea0113c663c.png)
 
 ### Install
 
@@ -18,3 +39,7 @@ cd ~/.dotfiles
 
 ./install
 ```
+
+### Author
+
+@sota1235
