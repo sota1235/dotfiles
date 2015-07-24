@@ -5,6 +5,9 @@
 # tmuxを起動する
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 
+# キーバインドをEmacs風に
+bindkey -e
+
 ###
 # プロンプト設定
 ###
