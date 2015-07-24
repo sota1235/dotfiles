@@ -18,7 +18,7 @@ dotfiles
 
 - zsh
 
-![](http://i.gyazo.com/e8faba2349639c142420fe3ddbfd0e9f.png)
+![](http://i.gyazo.com/a801b95998f2a47a28861a7d2b31f782.png)
 
 - vim
 
