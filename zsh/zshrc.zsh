@@ -32,7 +32,8 @@ setopt prompt_subst
 
 # プロンプト指定
 ret_status=" \
-%{${fg_bold[yellow]}%}%~%{${reset_color}%}\
+%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[blue]%}➜ %s)\
+%{${fg_bold[yellow]}%}%c%{${reset_color}%}\
 %(?.%{$fg_bold[green]%}.%{$fg_bold[blue]%}) %(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
 
 PROMPT="$ret_status"
