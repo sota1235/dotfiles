@@ -17,7 +17,7 @@ autoload -Uz vcs_info
 zstyle ":vcs_info:*" enable git # gitのみ有効にする
 zstyle ":vcs_info:git:*" check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}✗" # %c
-zstyle ':vsc_info:git:*' unstagedstr "%F{red}✗"  # %u
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}✗"  # %u
 zstyle ':vcs_info:git:*' formats "%F{green}(%s)-[%b] %c%u%f"
 precmd () { vcs_info }
 
@@ -35,7 +35,8 @@ ret_status=" \
 %{${fg[yellow]}%}%~%{${reset_color}%}\
 %(?.%{$fg[green]%}.%{$fg[blue]%}) %(?!(*'-') <!(*;-;%)? <)%{${reset_color}%} "
 
-PROMPT="${vcs_info_msg_0_}$ret_status"
+PROMPT="$ret_status"
+RPROMPT="${vcs_info_msg_0_}"
 
 # プロンプト指定(コマンドの続き)
 PROMPT2='[%n]> '
