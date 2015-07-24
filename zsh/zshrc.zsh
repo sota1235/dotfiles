@@ -296,22 +296,26 @@ fi
 ###
 
 ### rbenv ###
-export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bash_profile
-eval "$(rbenv init -)" >> ~/.bash_profile
+if [ -x "`which rbenv`" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bash_profile
+  eval "$(rbenv init -)" >> ~/.bash_profile
+fi
 
 ### pecoc ###
-n peco-select-history() {
-    local tac
-    if which tac > /dev/null; then
-        tac="tac"
-    else
-        tac="tail -r"
-    fi
-    BUFFER=$(\history -n 1 | \
-        eval $tac | \
-        peco --query "$LBUFFER")
-    CURSOR=$#BUFFER
-    zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
+if [ -x "`which peco`" ]; then
+  n peco-select-history() {
+      local tac
+      if which tac > /dev/null; then
+          tac="tac"
+      else
+          tac="tail -r"
+      fi
+      BUFFER=$(\history -n 1 | \
+          eval $tac | \
+          peco --query "$LBUFFER")
+      CURSOR=$#BUFFER
+      zle clear-screen
+  }
+  zle -N peco-select-history
+  bindkey '^r' peco-select-history
+fi
