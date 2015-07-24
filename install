@@ -66,6 +66,10 @@ if [ -e ~/.zshenv ]; then
   cp ~/.zshenv ~/.zshenv.backup
 fi
 
+# cp zsh files
+cp `pwd`/zsh/zshrc.zsh ~/.zshrc
+cp `pwd`/zsh/zshenv.zsh ~/.zshenv
+
 ###
 # tmux Setup
 ###
