@@ -1,13 +1,42 @@
 #!/bin/sh
 
-function cecho { echo -e "\e[34m$*\e[m"; }
+### functions ###
+function cecho {
+  if [ $OS == 'Lunux' ]; then
+    # TODO: CentOS7環境でのテスト
+    echo -e "\e[34m$*\e[m";
+  elif [ $OS == 'Mac' ]; then
+    printf "\033[34m$*\033[0m\n";
+  else
+    # TODO: Cygwinの際のecho
+    echo -e "\e[34m$*\e[m";
+  fi
+}
 
+
+###
+# Start install
+###
 echo '.----.  .----.  .---.   .----..-..-.   .----. .----.'
 echo '| {}  \/  {}  \{_   _}  | {_  | || |   | {_  { {__  '
 echo '|     /\      /  | |    | |   | || `--.| {__ .-._} }'
 echo '`----   `----    `-     `-    `- `---- `---- `----  '
 
 echo "(*'-') < Start install the dotfiles"
+
+###
+# judge OS
+###
+if [ "$(uname)" == 'Darwin' ]; then
+  OS='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  OS='Linux'
+elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then
+  OS='Cygwin'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
 
 ###
 # Vim Setup
@@ -48,8 +77,10 @@ cp `pwd`/gitfiles/gitconfig ~/.gitconfig
 GIT_NAME=""
 GIT_MAIL=""
 cecho "Please enter your GitHub name"
+/bin/echo -n "> "
 read GIT_NAME
 cecho "Please enter your GitHub e-mail address"
+/bin/echo -n "> "
 read GIT_MAIL
 
 cp `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
