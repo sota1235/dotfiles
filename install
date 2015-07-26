@@ -53,8 +53,8 @@ cecho "Please enter your GitHub e-mail address"
 read GIT_MAIL
 
 cp `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
-  sed -i s/{git_user_name}/${GIT_NAME}/g    ~/.gitconfig_local | \
-  sed -i s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
+sed -i "" s/{git_user_name}/${GIT_NAME}/g     ~/.gitconfig_local
+sed -i "" s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
 
 ###
 # Zsh Setup
