@@ -238,6 +238,9 @@ zstyle ':completion:*:sudo:*' command-path /user/local/sbin /usr/local/bin \
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
+# ファイル補完候補に色をつける
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 ###
 # オプション
 ###
