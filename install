@@ -126,3 +126,5 @@ fi
 cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
 cecho "Installation is completed"
+
+exec zsh
