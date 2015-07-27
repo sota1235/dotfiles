@@ -317,7 +317,7 @@ fi
 ###
 
 ### rbenv ###
-if [ -x "`which rbenv`" ]; then
+if [ -e $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bash_profile
   eval "$(rbenv init -)" >> ~/.bash_profile
 fi
