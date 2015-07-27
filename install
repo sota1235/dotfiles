@@ -3,7 +3,6 @@
 ### functions and alias for instalation ###
 function cecho {
   if [ $OS == 'Lunux' ]; then
-    # TODO: CentOS7環境でのテスト
     echo -e "\e[34m$*\e[m";
   elif [ $OS == 'Mac' ]; then
     printf "\033[34m$*\033[0m\n";
