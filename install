@@ -1,6 +1,6 @@
 #!/bin/sh
 
-### functions ###
+### functions and alias for instalation ###
 function cecho {
   if [ $OS == 'Lunux' ]; then
     # TODO: CentOS7環境でのテスト
@@ -13,6 +13,12 @@ function cecho {
   fi
 }
 
+# GNUとBSDのsedの挙動の違いを吸収
+if sed --version 2>/dev/null | grep -q GNU; then
+  alias sedi='sed -i '
+else
+  alias sedi='sed -i "" '
+fi
 
 ###
 # Start install
@@ -84,8 +90,8 @@ cecho "Please enter your GitHub e-mail address"
 read GIT_MAIL
 
 cp `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
-sed -i "" s/{git_user_name}/${GIT_NAME}/g     ~/.gitconfig_local
-sed -i "" s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
+sedi s/{git_user_name}/${GIT_NAME}/g     ~/.gitconfig_local
+sedi s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
 
 ###
 # Zsh Setup
