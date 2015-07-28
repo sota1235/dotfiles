@@ -51,8 +51,8 @@ alias la='ls -lAh'
 alias vi="vim"
 
 # Development for git init
-alias readmeinit="cp ~/.dotfiles/static/README_template.md ./README.md"
-alias licenseinit="cp ~/.dotfiles/static/LICENSE.txt ./LICENSE.txt"
+alias readmeinit="cp ~/.dotfiles/template/README_template.md ./README.md"
+alias licenseinit="cp ~/.dotfiles/template/LICENSE.txt ./LICENSE.txt"
 
 # Change Directory
 alias sota1235="cd ~/Documents/sota1235"
