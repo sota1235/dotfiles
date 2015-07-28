@@ -7,12 +7,29 @@ dotfiles
 
 発展途上dotfiles
 
-主に以下のものの使い勝手をよくしようとしてます。
+以下の設定ファイルをinstallします
 
 - zsh
 - git
 - vim
 - tmux
+
+### Requirement
+
+- zsh
+- git
+- vim7.4
+- tmux
+
+### Install
+
+```
+git clone git@github.com:sota1235/dotfiles.git ~/.dotfiles
+
+cd ~/.dotfiles
+
+./install
+```
 
 ### Usage
 
@@ -29,16 +46,6 @@ Thanks for [nikezono/dotfiles](https://github.com/nikezono/dotfiles)
 - tmux
 
 ![](http://i.gyazo.com/2455b942d346b34a594c5ea0113c663c.png)
-
-### Install
-
-```
-git clone git@github.com:sota1235/dotfiles.git ~/.dotfiles
-
-cd ~/.dotfiles
-
-./install
-```
 
 ### Author
 
