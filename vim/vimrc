@@ -340,6 +340,11 @@ function! s:GetHighlight(hi)
   return hl
 endfunction
 
+" window切り替えを変更
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 "
 " Moveto last edited line
