@@ -25,7 +25,7 @@ alias -s pdf="open"
 
 ## Global aliases ##
 alias -g @g='| grep'
-alias -g @l='| less'
+alias -g @l='| less -R'
 
 ## Normal Alias ##
 # Remote Login
