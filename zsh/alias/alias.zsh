@@ -41,7 +41,7 @@ alias please="sudo"
 alias ...="cd ../.."
 
 # List derectory contents
-alias ls='ls -GF'
+alias ls='ls -GF --color'
 alias lsa='ls -lah'
 alias l='ls -lh'
 alias ll='ls -lh'
