@@ -322,8 +322,8 @@ if [ -e $HOME/.rbenv ]; then
   eval "$(rbenv init -)" >> ~/.bash_profile
 fi
 
-### pecoc ###
-if [ -x "`which peco`" ]; then
+### peco ###
+if which peco > /dev/null 2>&1 ; then
   n peco-select-history() {
       local tac
       if which tac > /dev/null; then
