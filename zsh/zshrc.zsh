@@ -318,8 +318,8 @@ fi
 
 ### rbenv ###
 if [ -e $HOME/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bash_profile
-  eval "$(rbenv init -)" >> ~/.bash_profile
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
 fi
 
 ### peco ###
@@ -340,3 +340,9 @@ if which peco > /dev/null 2>&1 ; then
   zle -N peco-select-history
   bindkey '^r' peco-select-history
 fi
+
+###
+# PATH
+###
+# オリジナルコマンド
+export PATH="$HOME/.dotfiles/zsh/bin:$PATH"
