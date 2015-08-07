@@ -245,7 +245,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # 各種ハイライト
 ###
 # manページに色付け
-# TODO: OS X環境で確認
 export MANPAGER='less -R'
 man() {
     env \
