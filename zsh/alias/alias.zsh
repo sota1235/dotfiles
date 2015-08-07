@@ -64,7 +64,9 @@ alias newpost="middleman article"
 
 # Others
 alias grep="grep --color -n"
-alias sgrep="sjis_grep"
+if which nkf > /dev/null 2>&1 ; then
+  alias sgrep="sjis_grep"
+fi
 alias find_grep="find ./ -type f -print | xargs grep -n"
 
 alias e="exit"
