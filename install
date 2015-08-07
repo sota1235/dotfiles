@@ -112,8 +112,8 @@ cp `pwd`/zsh/zshrc.zsh $HOME/.zshrc
 cp `pwd`/zsh/zshenv.zsh $HOME/.zshenv
 
 # make PATH file
-if [ -e $HOME/.zsh_paths ]; then
-  touch $HOME/.zsh_paths
+if [ ! -e $HOME/.zsh_own_config ]; then
+  cp `pwd`/zsh/zsh_own_config.zsh $HOME/.zsh_own_config
 fi
 
 ###

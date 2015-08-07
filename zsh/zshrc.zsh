@@ -348,4 +348,4 @@ fi
 export PATH="$HOME/.dotfiles/zsh/bin:$PATH"
 
 # 外部パスファイルの読み込み
-source $HOME/.zsh_paths
+source $HOME/.zsh_own_config
