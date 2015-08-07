@@ -111,6 +111,11 @@ fi
 cp `pwd`/zsh/zshrc.zsh ~/.zshrc
 cp `pwd`/zsh/zshenv.zsh ~/.zshenv
 
+# make PATH file
+if [ -e $HOME/.zsh_paths ]; then
+  touch $HOME/.zsh_paths
+fi
+
 ###
 # tmux Setup
 ###
