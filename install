@@ -115,6 +115,11 @@ if [ ! -e $HOME/.zsh_own_config ]; then
   cp `pwd`/zsh/zsh_own_config.zsh $HOME/.zsh_own_config
 fi
 
+# make alias file
+if [ ! -e $HOME/.zsh_alias ]; then
+  touch $HOME/.zsh_alias
+fi
+
 ###
 # tmux Setup
 ###
