@@ -42,7 +42,7 @@ alias ...="cd ../.."
 
 # List derectory contents
 if which gls > /dev/null 2>&1 ; then
-  alias ls='gls --color'
+  alias ls='gls -GF --color'
 else
   alias ls='ls -GF'
 fi
