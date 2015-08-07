@@ -21,6 +21,10 @@ dotfiles
 - vim7.4
 - tmux
 
+On OS X, you need to insall some library.
+
+- coreutils
+
 ### Install
 
 ```

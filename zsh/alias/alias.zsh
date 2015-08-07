@@ -41,7 +41,11 @@ alias please="sudo"
 alias ...="cd ../.."
 
 # List derectory contents
-alias ls='ls -GF --color'
+if which gls > /dev/null 2>&1 ; then
+  alias ls='gls --color'
+else
+  alias ls='ls -GF'
+fi
 alias lsa='ls -lah'
 alias l='ls -lh'
 alias ll='ls -lh'
