@@ -3,12 +3,12 @@
 ### functions and alias for instalation ###
 function cecho {
   if [ $OS == 'Lunux' ]; then
-    echo -e "\e[34m$*\e[m";
+    printf "\033[34m$*\033[0m\n";
   elif [ $OS == 'Mac' ]; then
     printf "\033[34m$*\033[0m\n";
   else
-    # TODO: Cygwinの際のecho
-    echo -e "\e[34m$*\e[m";
+    # TODO: Cygwinでの挙動
+    printf "\033[34m$*\033[0m\n";
   fi
 }
 
