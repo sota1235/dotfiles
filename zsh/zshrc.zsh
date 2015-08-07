@@ -239,7 +239,7 @@ zstyle ':completion:*:sudo:*' command-path /user/local/sbin /usr/local/bin \
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 # ファイル補完候補に色をつける
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 ###
 # 各種ハイライト
