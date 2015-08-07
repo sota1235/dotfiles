@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 # include functions
-source ~/.dotfiles/zsh/alias/functions.zsh
+source $HOME/.dotfiles/zsh/alias/functions.zsh
 
 ## Suffix aliases ##
 # script language
@@ -51,13 +51,13 @@ alias la='ls -lAh'
 alias vi="vim"
 
 # Development for git init
-alias readmeinit="cp ~/.dotfiles/template/README_template.md ./README.md"
-alias licenseinit="cp ~/.dotfiles/template/LICENSE.txt ./LICENSE.txt"
+alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
+alias licenseinit="cp $HOME/.dotfiles/template/LICENSE.txt ./LICENSE.txt"
 
 # Change Directory
-alias sota1235="cd ~/Documents/sota1235"
-alias github="cd ~/Documents/sota1235/github"
-alias blog="cd ~/Documents/sota1235/Now_Running/blog"
+alias sota1235="cd $HOME/Documents/sota1235"
+alias github="cd $HOME/Documents/sota1235/github"
+alias blog="cd $HOME/Documents/sota1235/Now_Running/blog"
 
 # Middleman
 alias newpost="middleman article"

@@ -50,12 +50,12 @@ fi
 cecho "Starting Vim setup"
 
 # backup the vim files
-if [ -e ~/.vimrc ]; then
-  cp ~/.vimrc ~/.vimrc.backup
+if [ -e $HOME/.vimrc ]; then
+  cp $HOME/.vimrc $HOME/.vimrc.backup
 fi
 
 # make the vim files
-cp `pwd`/vim/vimrc ~/.vimrc
+cp `pwd`/vim/vimrc $HOME/.vimrc
 
 ###
 # Git Setup
@@ -64,19 +64,19 @@ cp `pwd`/vim/vimrc ~/.vimrc
 cecho "Starting Git setup"
 
 # backup the git files
-if [ -e ~/.gitconfig ]; then
-  cp ~/.gitconfig ~/.gitconfig.backup
+if [ -e $HOME/.gitconfig ]; then
+  cp $HOME/.gitconfig $HOME/.gitconfig.backup
 fi
-if [ -e ~/.gitconfig_local ]; then
-  cp ~/.gitconfig_local ~/.gitconfig_local.backup
+if [ -e $HOME/.gitconfig_local ]; then
+  cp $HOME/.gitconfig_local $HOME/.gitconfig_local.backup
 fi
-if [ -e ~/.gitignore ]; then
-  cp ~/.gitignore ~/.gitignore.backup
+if [ -e $HOME/.gitignore ]; then
+  cp $HOME/.gitignore $HOME/.gitignore.backup
 fi
 
 # make the git files
-cp `pwd`/gitfiles/gitignore ~/.gitignore
-cp `pwd`/gitfiles/gitconfig ~/.gitconfig
+cp `pwd`/gitfiles/gitignore $HOME/.gitignore
+cp `pwd`/gitfiles/gitconfig $HOME/.gitconfig
 
 # make original gitconfig_local file
 GIT_NAME=""
@@ -88,9 +88,9 @@ cecho "Please enter your GitHub e-mail address"
 /bin/echo -n "> "
 read GIT_MAIL
 
-cp `pwd`/gitfiles/gitconfig_local ~/.gitconfig_local
-sedi s/{git_user_name}/${GIT_NAME}/g     ~/.gitconfig_local
-sedi s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
+cp `pwd`/gitfiles/gitconfig_local $HOME/.gitconfig_local
+sedi s/{git_user_name}/${GIT_NAME}/g     $HOME/.gitconfig_local
+sedi s/{git_email_address}/${GIT_MAIL}/g $HOME/.gitconfig_local
 
 ###
 # Zsh Setup
@@ -100,16 +100,16 @@ sedi s/{git_email_address}/${GIT_MAIL}/g ~/.gitconfig_local
 cecho "Starting zsh setup"
 
 # backup the zsh files
-if [ -e ~/.zshrc ]; then
-  cp ~/.zshrc  ~/.zshrc.backup
+if [ -e $HOME/.zshrc ]; then
+  cp $HOME/.zshrc  $HOME/.zshrc.backup
 fi
-if [ -e ~/.zshenv ]; then
-  cp ~/.zshenv ~/.zshenv.backup
+if [ -e $HOME/.zshenv ]; then
+  cp $HOME/.zshenv $HOME/.zshenv.backup
 fi
 
 # cp zsh files
-cp `pwd`/zsh/zshrc.zsh ~/.zshrc
-cp `pwd`/zsh/zshenv.zsh ~/.zshenv
+cp `pwd`/zsh/zshrc.zsh $HOME/.zshrc
+cp `pwd`/zsh/zshenv.zsh $HOME/.zshenv
 
 # make PATH file
 if [ -e $HOME/.zsh_paths ]; then
@@ -123,12 +123,12 @@ fi
 cecho "Startging tmux setup"
 
 # backup .tmux.conf
-if [ -e ~/.tmux.conf ]; then
-  cp ~/.tmux.conf ~/.tmux.conf.backup
+if [ -e $HOME/.tmux.conf ]; then
+  cp $HOME/.tmux.conf $HOME/.tmux.conf.backup
 fi
 
 # cp tmux.conf
-cp `pwd`/tmux/tmux.conf ~/.tmux.conf
+cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
 cecho "Installation is completed"
 

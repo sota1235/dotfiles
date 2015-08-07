@@ -286,7 +286,7 @@ log
 ###
 # History
 ###
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
@@ -298,18 +298,18 @@ setopt hist_reduce_blanks
 ###
 
 # read functions
-source ~/.dotfiles/zsh/functions/keybind.zsh
+source $HOME/.dotfiles/zsh/functions/keybind.zsh
 zle -N my_enter
 bindkey '^m' my_enter
 
 # alias読み込み
-source ~/.dotfiles/zsh/alias/alias.zsh
+source $HOME/.dotfiles/zsh/alias/alias.zsh
 
 # directory色付け
 if [ -x "`which dircolors`" ]; then
-  eval $(dircolors ~/.dotfiles/zsh/lib/dircolors.ansi-universal)
+  eval $(dircolors $HOME/.dotfiles/zsh/lib/dircolors.ansi-universal)
 elif [ -x "`which gdircolors`" ]; then
-  eval $(gdircolors ~/.dotfiles/zsh/lib/dircolors.ansi-universal)
+  eval $(gdircolors $HOME/.dotfiles/zsh/lib/dircolors.ansi-universal)
 fi
 
 ###
