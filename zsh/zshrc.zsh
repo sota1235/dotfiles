@@ -322,6 +322,11 @@ if [ -e $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
+### nvm ###
+if [ -e $HOME/.nvm ]; then
+  source $HOME/.nvm/nvm.sh
+fi
+
 ### peco ###
 if which peco > /dev/null 2>&1 ; then
   n peco-select-history() {
