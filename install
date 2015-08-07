@@ -67,9 +67,6 @@ cecho "Starting Git setup"
 if [ -e $HOME/.gitconfig ]; then
   cp $HOME/.gitconfig $HOME/.gitconfig.backup
 fi
-if [ -e $HOME/.gitconfig_local ]; then
-  cp $HOME/.gitconfig_local $HOME/.gitconfig_local.backup
-fi
 if [ -e $HOME/.gitignore ]; then
   cp $HOME/.gitignore $HOME/.gitignore.backup
 fi
@@ -79,18 +76,20 @@ cp `pwd`/gitfiles/gitignore $HOME/.gitignore
 cp `pwd`/gitfiles/gitconfig $HOME/.gitconfig
 
 # make original gitconfig_local file
-GIT_NAME=""
-GIT_MAIL=""
-cecho "Please enter your GitHub name"
-/bin/echo -n "> "
-read GIT_NAME
-cecho "Please enter your GitHub e-mail address"
-/bin/echo -n "> "
-read GIT_MAIL
+if [ ! -e $HOME/.gitconfig_local ]; then
+  GIT_NAME=""
+  GIT_MAIL=""
+  cecho "Please enter your GitHub name"
+  /bin/echo -n "> "
+  read GIT_NAME
+  cecho "Please enter your GitHub e-mail address"
+  /bin/echo -n "> "
+  read GIT_MAIL
 
-cp `pwd`/gitfiles/gitconfig_local $HOME/.gitconfig_local
-sedi s/{git_user_name}/${GIT_NAME}/g     $HOME/.gitconfig_local
-sedi s/{git_email_address}/${GIT_MAIL}/g $HOME/.gitconfig_local
+  cp `pwd`/gitfiles/gitconfig_local $HOME/.gitconfig_local
+  sedi s/{git_user_name}/${GIT_NAME}/g     $HOME/.gitconfig_local
+  sedi s/{git_email_address}/${GIT_MAIL}/g $HOME/.gitconfig_local
+fi
 
 ###
 # Zsh Setup
