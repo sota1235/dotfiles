@@ -25,6 +25,12 @@ On OS X, you need to insall some library.
 
 - coreutils
 
+This dotfiles supports the following libraries.
+
+- [rbenv](https://github.com/sstephenson/rbenv)
+- [nvm](https://github.com/creationix/nvm)
+- [peco](https://github.com/peco/peco)
+
 ### Install
 
 ```
