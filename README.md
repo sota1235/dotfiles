@@ -27,6 +27,7 @@ On OS X, you need to insall some library.
 
 This dotfiles supports the following libraries.
 
+- [pyenv](https://github.com/yyuu/pyenv)
 - [rbenv](https://github.com/sstephenson/rbenv)
 - [nvm](https://github.com/creationix/nvm)
 - [peco](https://github.com/peco/peco)
