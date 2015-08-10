@@ -346,6 +346,11 @@ if which peco > /dev/null 2>&1 ; then
   bindkey '^r' peco-select-history
 fi
 
+### composer global commands"
+if [ -e $HOME/.composer ]; then
+  PATH="$HOME/.composer/vendor/bin:$PATH"
+fi
+
 ###
 # PATH
 ###
