@@ -72,6 +72,7 @@ if which nkf > /dev/null 2>&1 ; then
   alias sgrep="sjis_grep"
 fi
 alias find_grep="find ./ -type f -print | xargs grep -n"
+alias todo="find ./ -type f -print | xargs grep -n --color TODO"
 
 alias e="exit"
 alias g="git"
