@@ -3,7 +3,9 @@
 ###
 
 # tmuxを起動する
+if which tmux > /dev/null 2>&1 ; then
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+fi
 
 # キーバインドをEmacs風に
 bindkey -e
@@ -329,7 +331,7 @@ fi
 
 ### peco ###
 if which peco > /dev/null 2>&1 ; then
-  n peco-select-history() {
+  function peco-select-history() {
       local tac
       if which tac > /dev/null; then
           tac="tac"
