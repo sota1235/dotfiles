@@ -1,0 +1,85 @@
+#!/bin/zsh
+
+### functions and alias for instalation ###
+function cecho {
+  if [ $OS == 'Lunux' ]; then
+    printf "\033[34m$*\033[0m\n";
+  elif [ $OS == 'Mac' ]; then
+    printf "\033[34m$*\033[0m\n";
+  else
+    # TODO: Cygwinでの挙動
+    printf "\033[34m$*\033[0m\n";
+  fi
+}
+
+###
+# Start uninstall
+###
+echo -n "(*;-;) < Do you want to uninstall the dotfiles? [n/Y] "
+ANSWER=""
+read ANSWER
+if [ $ANSWER != "n" ]; then
+  exit "Uninstalling is not done."
+fi
+# TODO: n/Y以外の場合の処理
+
+###
+# judge OS
+###
+if [ "$(uname)" == 'Darwin' ]; then
+  OS='Mac'
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  OS='Linux'
+elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then
+  OS='Cygwin'
+else
+  echo "Your platform ($(uname -a)) is not supported."
+  exit 1
+fi
+
+###
+# Uninstall Vim dotfiles
+###
+
+cecho "Starting uninstall vim dotfiles"
+
+# recovery the vim files
+cp $HOME/.vimrc.backup $HOME/.vimrc
+
+###
+# Uninstall Git dotfiles
+###
+
+cecho "Starting uninstalling Git dotfiles"
+
+# recovery the git dotfiles
+cp $HOME/.gitconfig.backup $HOME/.gitconfig
+cp $HOME/.gitignore.backup $HOME/.gitignore
+if [ -e $HOME/.gitconfig_local ]; then
+  rm $HOME/.gitconfig_local
+fi
+
+###
+# Uninstall zsh dotfiles
+###
+
+cecho "Starting uninstalling zsh dotfiles"
+
+cp $HOME/.zshrc.backup  $HOME/.zshrc
+cp $HOME/.zshenv.backup $HOME/.zshenv
+if [ -e $HOME/.zsh_own_config ]; then
+  rm $HOME/.zsh_own_config
+fi
+if [ -e $HOME/.zsh_alias ]; then
+  rm $HOME/.zsh_alias
+fi
+
+###
+# Uninstall tmux dotfiles
+###
+
+cecho "Startging uninstalling tmux dotfiles"
+
+cp $HOME/.tmux.conf.backup $HOME/.tmux.conf
+
+cecho "Uninstalling is completed!! Thanks for using."
