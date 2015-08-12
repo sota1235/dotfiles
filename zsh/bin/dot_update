@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 ### functions and alias for instalation ###
 function cecho {
@@ -22,7 +22,7 @@ fi
 ###
 # Start install
 ###
-echo "(*'-') < Do you want to update the dotfiles? [y/N]"
+echo -n "(*'-') < Do you want to update the dotfiles? [y/N] "
 ANSWER=""
 read ANSWER
 if [ $ANSWER != "y" ]; then
