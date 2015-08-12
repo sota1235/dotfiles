@@ -12,16 +12,20 @@ alias -s pl=perl
 alias -s js=node
 alias -s coffee=coffee
 # image file
-alias -s png="open"
-alias -s jpg="open"
-alias -s jpeg="open"
-alias -s gif="open"
+if which open > /dev/null 2>&1 ; then
+  alias -s png="open"
+  alias -s jpg="open"
+  alias -s jpeg="open"
+  alias -s gif="open"
+fi
 
 # others
 alias -s txt=vim
-alias -s md="open -a Mou"
-alias -s markdown="open -a Mou"
-alias -s pdf="open"
+if which open > /dev/null 2>&1 ; then
+  alias -s md="open -a Mou"
+  alias -s markdown="open -a Mou"
+  alias -s pdf="open"
+fi
 
 ## Global aliases ##
 alias -g @g='| grep'
