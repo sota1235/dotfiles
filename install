@@ -44,6 +44,13 @@ else
 fi
 
 ###
+# check zsh installed
+###
+if which zsh > /dev/null 2>&1 ; then
+  exit "Zsh is not found. You need install zsh..."
+fi
+
+###
 # Vim Setup
 ###
 
