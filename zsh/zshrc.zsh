@@ -354,7 +354,7 @@ if [ -e $HOME/.composer ]; then
 fi
 
 ### zsh-completions ###
-export fpath="$HOME/.dotfiles/zsh/lib/zsh-completions/src:$fpath"
+# fpath=($HOME/.dotfiles/zsh/lib/zsh-completions/src $fpath)
 
 ###
 # PATH
