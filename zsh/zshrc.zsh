@@ -348,10 +348,13 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 fi
 
-### composer global commands"
+### composer global commands ###
 if [ -e $HOME/.composer ]; then
   PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
+
+### zsh-completions ###
+export fpath="$HOME/.dotfiles/zsh/lib/zsh-completions/src:$fpath"
 
 ###
 # PATH
