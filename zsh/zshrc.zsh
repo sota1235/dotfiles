@@ -355,6 +355,7 @@ fi
 
 ### zsh-completions ###
 fpath=($HOME/.dotfiles/zsh/lib/zsh-completions/src $fpath)
+compinit # fpathの後ろで宣言する必要がある
 
 ###
 # PATH
