@@ -197,9 +197,9 @@ setopt prompt_subst
 
 # プロンプト指定
 ret_status=" \
-  %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[blue]%}➜ %s)\
-  %{${fg_bold[yellow]}%}%c%{${reset_color}%}\
-  %(?.%{$fg_bold[green]%}.%{$fg_bold[blue]%}) %(?!(*･-･%) <!(*;_;%)? <)%{${reset_color}%} "
+%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[blue]%}➜ %s)\
+%{${fg_bold[yellow]}%}%c%{${reset_color}%}\
+%(?.%{$fg_bold[green]%}.%{$fg_bold[blue]%}) %(?!(*･-･%) <!(*;_;%)? <)%{${reset_color}%} "
 
 PROMPT="$ret_status"
 RPROMPT="${vcs_info_msg_0_}"
