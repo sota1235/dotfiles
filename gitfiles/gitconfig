@@ -20,9 +20,9 @@
   ci  = commit
   wc  = whatchanged
   dmb = "!git branch --merged|egrep -v 'develop|master'|xargs git branch -d"
-  alias     = "!sh 'git config --list | grep ^alias. | cut -c 7-'"
+  alias  = "!git config --list|grep ^alias.|cut -c 7-"
   l1     = log --oneline
   lgraph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
   lall   = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
-  today     = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\"'"
+  today  = "!git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\""
   pom = push origin master
