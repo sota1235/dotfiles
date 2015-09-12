@@ -31,18 +31,12 @@ fi
 alias -g @g='| grep'
 alias -g @l='| less -R'
 
-## Normal Alias ##
-# Remote Login
-alias sota="ssh sota@sota1235.net"
-alias t11460ss="ssh t11460ss@ccx00.sfc.keio.ac.jp"
-alias webedit="ssh t11460ss@webedit.sfc.keio.ac.jp"
-
 # Super user
 alias _="sudo"
-alias please="sudo"
 
 # Basic directory operations
 alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # List derectory contents
 if which gls > /dev/null 2>&1 ; then
@@ -81,4 +75,3 @@ alias todo="find ./ -type f -print | xargs grep -n --color TODO"
 alias e="exit"
 alias g="git"
 alias b="brew"
-alias c="clear"
