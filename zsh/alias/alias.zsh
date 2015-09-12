@@ -56,11 +56,6 @@ alias vi="vim"
 alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
 alias licenseinit="cp $HOME/.dotfiles/template/LICENSE.txt ./LICENSE.txt"
 
-# Change Directory
-alias sota1235="cd $HOME/Documents/sota1235"
-alias github="cd $HOME/Documents/sota1235/github"
-alias blog="cd $HOME/Documents/sota1235/Now_Running/blog"
-
 # Middleman
 alias newpost="middleman article"
 
