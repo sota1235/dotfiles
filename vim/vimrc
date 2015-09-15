@@ -61,6 +61,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'xsbeats/vim-blade'
 
 " VimProc
 NeoBundle 'Shougo/vimproc', {
