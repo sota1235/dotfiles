@@ -46,17 +46,17 @@ cd ~/.dotfiles
 
 - zsh
 
-![](http://i.gyazo.com/a801b95998f2a47a28861a7d2b31f782.png)
+![](https://i.gyazo.com/1404f537852307201b80d4477ea7e415.png)
 
 - vim
 
 Thanks for [nikezono/dotfiles](https://github.com/nikezono/dotfiles)
 
-![](http://i.gyazo.com/3f9c2e3c350654d5ec8572509278465f.png)
+![](https://i.gyazo.com/7601ffa462abb53abb8034f60c842121.png)
 
 - tmux
 
-![](http://i.gyazo.com/2455b942d346b34a594c5ea0113c663c.png)
+![](https://i.gyazo.com/c8aeebff9bb277d5c2e4a3295cac857b.png)
 
 ### Author
 
