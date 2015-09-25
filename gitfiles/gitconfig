@@ -19,6 +19,7 @@
   co  = checkout
   ci  = commit
   wc  = whatchanged
+  fp  = fetch --prune
   dmb = "!git branch --merged|egrep -v 'develop|master'|xargs git branch -d"
   alias  = "!git config --list|grep ^alias.|cut -c 7-"
   l1     = log --oneline
