@@ -34,12 +34,18 @@ This dotfiles supports the following libraries.
 
 ### Install
 
+```shell
+$ git clone git@github.com:sota1235/dotfiles.git ~/.dotfiles
+
+$ cd ~/.dotfiles
+
+$ ./install
 ```
-git clone git@github.com:sota1235/dotfiles.git ~/.dotfiles
 
-cd ~/.dotfiles
+You can specify git user name and e-mail address by add options.
 
-./install
+```shell
+$ ./install -u {git user name} -e {git e-mail address}
 ```
 
 ### Usage
