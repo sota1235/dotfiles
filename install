@@ -185,4 +185,4 @@ cecho "Installation is completed"
 
 exec zsh
 
-exit 1
+exit 0
