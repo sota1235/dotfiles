@@ -184,3 +184,5 @@ cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 cecho "Installation is completed"
 
 exec zsh
+
+exit 1
