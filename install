@@ -1,6 +1,9 @@
 #!/bin/sh
 
-### functions and alias for instalation ###
+###
+# Functions
+###
+# echo in color
 function cecho {
   if [ $OS == 'Lunux' ]; then
     printf "\033[34m$*\033[0m\n";
@@ -12,6 +15,15 @@ function cecho {
   fi
 }
 
+# output usage of options
+function usage_exit {
+  echo "Usage: $0 [-u git user name] [-e git email]" 1>&2
+  exit 1
+}
+
+###
+# Alias
+###
 # GNUとBSDのsedの挙動の違いを吸収
 if sed --version 2>/dev/null | grep -q GNU; then
   alias sedi='sed -i '
@@ -28,6 +40,21 @@ echo '|     /\      /  | |    | |   | || `--.| {__ .-._} }'
 echo '`----   `----    `-     `-    `- `---- `---- `----  '
 
 echo "(*'-') < Start install the dotfiles"
+
+###
+# Check options
+###
+while getopts u:e: OPT
+do
+  case $OPT in
+    u) GIT_NAME=$OPTARG
+      ;;
+    e) GIT_MAIL=$OPTARG
+      ;;
+    :|\?) usage_exit
+      ;;
+  esac
+done
 
 ###
 # judge OS
@@ -90,14 +117,21 @@ cp `pwd`/gitfiles/gitconfig $HOME/.gitconfig
 
 # make original gitconfig_local file
 if [ ! -e $HOME/.gitconfig_local ]; then
-  GIT_NAME=""
-  GIT_MAIL=""
-  cecho "Please enter your GitHub name"
-  /bin/echo -n "> "
-  read GIT_NAME
-  cecho "Please enter your GitHub e-mail address"
-  /bin/echo -n "> "
-  read GIT_MAIL
+  if [ ! -n "$GIT_NAME" ]; then
+    cecho "Please enter your git name"
+    /bin/echo -n "> "
+    read GIT_NAME
+  else
+    cecho "Your git name is $GIT_NAME"
+  fi
+
+  if [ ! -n "$GIT_MAIL" ]; then
+    cecho "Please enter your git e-mail address"
+    /bin/echo -n "> "
+    read GIT_MAIL
+  else
+    cecho "Your git e-mail address is $GIT_MAIL"
+  fi
 
   cp `pwd`/gitfiles/gitconfig_local $HOME/.gitconfig_local
   sedi s/{git_user_name}/${GIT_NAME}/g     $HOME/.gitconfig_local
