@@ -1,16 +1,27 @@
 #!/bin/zsh
 
-### functions and alias for instalation ###
-function cecho {
-  if [ $OS=='Lunux' ]; then
-    echo -e "\e[34m$*\e[m";
-  elif [ $OS=='Mac' ]; then
-    printf "\033[34m$*\033[0m\n";
-  else
-    # TODO: Cygwinの際のecho
-    echo -e "\e[34m$*\e[m";
-  fi
-}
+# Use colors, but only if connected to a terminal, and that terminal
+# supports them.
+# thanks for oh-my-zsh - https://github.com/robbyrussell/oh-my-zsh
+tput=$(which tput)
+if [ -n "$tput" ]; then
+    ncolors=$($tput colors)
+fi
+if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
+  RED="$(tput setaf 1)"
+  GREEN="$(tput setaf 2)"
+  YELLOW="$(tput setaf 3)"
+  BLUE="$(tput setaf 4)"
+  BOLD="$(tput bold)"
+  NORMAL="$(tput sgr0)"
+else
+  RED=""
+  GREEN=""
+  YELLOW=""
+  BLUE=""
+  BOLD=""
+  NORMAL=""
+fi
 
 # GNUとBSDのsedの挙動の違いを吸収
 if sed --version 2>/dev/null | grep -q GNU; then
@@ -22,7 +33,7 @@ fi
 ###
 # Start install
 ###
-echo -n "(*'-') < Do you want to update the dotfiles? [y/N] "
+printf "${BOLD}${GREEN}(*'-') < Do you want to update the dotfiles? [y/N] ${NORMAL}"
 ANSWER=""
 read ANSWER
 if [ $ANSWER != "y" ]; then
@@ -48,24 +59,26 @@ fi
 # Cloning latest dotfiles
 ###
 
-cecho "Starting cloning latest dotfiles"
+printf "${BOLD}${GREEN}Starting cloning latest dotfiles${NORMAL}\n"
 
 CURRENT_PATH=`pwd` # save current path
 cd $HOME/.dotfiles
 if git pull --stat --rebase origin master; then
+  printf "${BOLD}${GREEN}"
   echo '.----.  .----.  .---.   .----..-..-.   .----. .----.'
   echo '| {}  \/  {}  \{_   _}  | {_  | || |   | {_  { {__  '
   echo '|     /\      /  | |    | |   | || `--.| {__ .-._} }'
   echo '`----   `----    `-     `-    `- `---- `---- `----  '
+  printf "${NORMAL}"
 else
-  cecho "There was an error updating. Try again later?"
+  printf "${BOLD}${RED}There was an error updating. Try again later?${NORMAL}\n"
 fi
 
 ###
 # Vim Setup
 ###
 
-cecho "Starting Vim updating"
+printf "${BOLD}${GREEN}Starting Vim updating${NORMAL}\n"
 
 # make the vim files
 cp `pwd`/vim/vimrc ~/.vimrc
@@ -74,7 +87,7 @@ cp `pwd`/vim/vimrc ~/.vimrc
 # Git Setup
 ###
 
-cecho "Starting Git setup"
+printf "${BOLD}${GREEN}Starting Git setup${NORMAL}\n"
 
 # make the git files
 cp `pwd`/gitfiles/gitignore ~/.gitignore
@@ -85,7 +98,7 @@ cp `pwd`/gitfiles/gitconfig ~/.gitconfig
 ###
 
 # include alias.zsh
-cecho "Starting zsh setup"
+printf "${BOLD}${GREEN}Starting zsh setup${NORMAL}\n"
 
 # cp zsh files
 cp `pwd`/zsh/zshrc.zsh ~/.zshrc
@@ -95,12 +108,12 @@ cp `pwd`/zsh/zshenv.zsh ~/.zshenv
 # tmux Setup
 ###
 
-cecho "Startging tmux setup"
+printf "${BOLD}${GREEN}Startging tmux setup${NORMAL}\n"
 
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
-cecho "Updating is completed"
+printf "${BOLD}${GREEN}Updating is completed${NORMAL}\n"
 
 cd $CURRENT_PATH # return to path command excute
 
