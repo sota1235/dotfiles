@@ -50,6 +50,7 @@ fi
 
 cecho "Starting cloning latest dotfiles"
 
+CURRENT_PATH=`pwd` # save current path
 cd $HOME/.dotfiles
 if git pull --stat --rebase origin master; then
   echo '.----.  .----.  .---.   .----..-..-.   .----. .----.'
@@ -101,4 +102,6 @@ cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
 cecho "Updating is completed"
 
-exec zsh
+cd $CURRENT_PATH # return to path command excute
+
+env zsh
