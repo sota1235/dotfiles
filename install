@@ -3,17 +3,28 @@
 ###
 # Functions
 ###
-# echo in color
-function cecho {
-  if [ $OS == 'Lunux' ]; then
-    printf "\033[34m$*\033[0m\n";
-  elif [ $OS == 'Mac' ]; then
-    printf "\033[34m$*\033[0m\n";
-  else
-    # TODO: Cygwinでの挙動
-    printf "\033[34m$*\033[0m\n";
-  fi
-}
+
+# Use colors, but only if connected to a terminal, and that terminal
+# supports them.
+tput=$(which tput)
+if [ -n "$tput" ]; then
+    ncolors=$($tput colors)
+fi
+if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
+  RED="$(tput setaf 1)"
+  GREEN="$(tput setaf 2)"
+  YELLOW="$(tput setaf 3)"
+  BLUE="$(tput setaf 4)"
+  BOLD="$(tput bold)"
+  NORMAL="$(tput sgr0)"
+else
+  RED=""
+  GREEN=""
+  YELLOW=""
+  BLUE=""
+  BOLD=""
+  NORMAL=""
+fi
 
 # output usage of options
 function usage_exit {
@@ -34,12 +45,13 @@ fi
 ###
 # Start install
 ###
+printf "${BOLD}${GREEN}"
 echo '.----.  .----.  .---.   .----..-..-.   .----. .----.'
 echo '| {}  \/  {}  \{_   _}  | {_  | || |   | {_  { {__  '
 echo '|     /\      /  | |    | |   | || `--.| {__ .-._} }'
 echo '`----   `----    `-     `-    `- `---- `---- `----  '
-
 echo "(*'-') < Start install the dotfiles"
+printf "${NORMAL}"
 
 ###
 # Check options
@@ -87,7 +99,7 @@ git submodule update
 # Vim Setup
 ###
 
-cecho "Starting Vim setup"
+printf "${BOLD}${BLUE}Starting Vim setup${NORMAL}\n"
 
 # backup the vim files
 if [ -e $HOME/.vimrc ]; then
@@ -101,7 +113,7 @@ cp `pwd`/vim/vimrc $HOME/.vimrc
 # Git Setup
 ###
 
-cecho "Starting Git setup"
+printf "${BOLD}${BLUE}Starting Git setup${NORMAL}\n"
 
 # backup the git files
 if [ -e $HOME/.gitconfig ]; then
@@ -118,19 +130,19 @@ cp `pwd`/gitfiles/gitconfig $HOME/.gitconfig
 # make original gitconfig_local file
 if [ ! -e $HOME/.gitconfig_local ]; then
   if [ ! -n "$GIT_NAME" ]; then
-    cecho "Please enter your git name"
-    /bin/echo -n "> "
+    printf "${YELLOW}Please enter your git name${NORMAL}\n"
+    printf "${BOLD}${YELLOW}> ${NORMAL}"
     read GIT_NAME
   else
-    cecho "Your git name is $GIT_NAME"
+    printf "${YELLOW}Your git name is $GIT_NAME${NORMAL}\n"
   fi
 
   if [ ! -n "$GIT_MAIL" ]; then
-    cecho "Please enter your git e-mail address"
-    /bin/echo -n "> "
+    printf "${YELLOW}Please enter your git e-mail address${NORMAL}\n"
+    printf "${BOLD}${YELLOW}> ${NORMAL}\n"
     read GIT_MAIL
   else
-    cecho "Your git e-mail address is $GIT_MAIL"
+    printf "${YELLOW}Your git e-mail address is $GIT_MAIL${NORMAL}\n"
   fi
 
   cp `pwd`/gitfiles/gitconfig_local $HOME/.gitconfig_local
@@ -143,7 +155,7 @@ fi
 ###
 
 # include alias.zsh
-cecho "Starting zsh setup"
+printf "${BOLD}${BLUE}Starting zsh setup${NORMAL}\n"
 
 # backup the zsh files
 if [ -e $HOME/.zshrc ]; then
@@ -171,7 +183,7 @@ fi
 # tmux Setup
 ###
 
-cecho "Startging tmux setup"
+printf "${BOLD}${BLUE}Startging tmux setup${NORMAL}\n"
 
 # backup .tmux.conf
 if [ -e $HOME/.tmux.conf ]; then
@@ -181,8 +193,7 @@ fi
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
-cecho "Installation is completed"
+printf "${BOLD}${BLUE}Installation is completed${NORMAL}\n"
 
-exec zsh
-
+env zsh
 exit 0
