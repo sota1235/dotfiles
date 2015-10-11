@@ -6,6 +6,7 @@
 
 # Use colors, but only if connected to a terminal, and that terminal
 # supports them.
+# thanks for oh-my-zsh - https://github.com/robbyrussell/oh-my-zsh
 tput=$(which tput)
 if [ -n "$tput" ]; then
     ncolors=$($tput colors)
