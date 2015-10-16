@@ -30,6 +30,7 @@ fi
 ## Global aliases ##
 alias -g @g='| grep'
 alias -g @l='| less -R'
+alias -g @le='|& less -R'
 
 # Super user
 alias _="sudo"
