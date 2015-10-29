@@ -301,7 +301,7 @@ augroup cch
   autocmd WinLeave * set nocursorline
   autocmd WinEnter,BufRead * set cursorline
 augroup END
-
+set viminfo='20,\"1000
 
 "
 " Key remap
