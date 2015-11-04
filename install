@@ -140,7 +140,7 @@ if [ ! -e $HOME/.gitconfig_local ]; then
 
   if [ ! -n "$GIT_MAIL" ]; then
     printf "${YELLOW}Please enter your git e-mail address${NORMAL}\n"
-    printf "${BOLD}${YELLOW}> ${NORMAL}\n"
+    printf "${BOLD}${YELLOW}> ${NORMAL}"
     read GIT_MAIL
   else
     printf "${YELLOW}Your git e-mail address is $GIT_MAIL${NORMAL}\n"
