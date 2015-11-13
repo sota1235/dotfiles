@@ -478,3 +478,8 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
+
+
+" スペルチェック機能
+set spell
+set spelllang=en
