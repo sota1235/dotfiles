@@ -113,8 +113,7 @@ fi
 
 # make the vim files
 cp `pwd`/vim/vimrc $HOME/.vimrc
-mkdir $HOME/.vim
-cp -R `pwd`/vim/vim/ $HOME/.vim/
+cp -R `pwd`/vim/vim/* $HOME/.vim/
 
 ###
 # Git Setup
