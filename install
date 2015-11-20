@@ -107,8 +107,14 @@ if [ -e $HOME/.vimrc ]; then
   cp $HOME/.vimrc $HOME/.vimrc.backup
 fi
 
+if [ -e $HOME/.vim ]; then
+  cp $HOME/.vim $HOME/.vim.backup
+fi
+
 # make the vim files
 cp `pwd`/vim/vimrc $HOME/.vimrc
+mkdir $HOME/.vim
+cp -R `pwd`/vim/vim/ $HOME/.vim/
 
 ###
 # Git Setup
@@ -152,7 +158,7 @@ if [ ! -e $HOME/.gitconfig_local ]; then
 fi
 
 ###
-# Zsh Setup
+# zsh Setup
 ###
 
 # include alias.zsh
@@ -184,7 +190,7 @@ fi
 # tmux Setup
 ###
 
-printf "${BOLD}${BLUE}Startging tmux setup${NORMAL}\n"
+printf "${BOLD}${BLUE}Starting tmux setup${NORMAL}\n"
 
 # backup .tmux.conf
 if [ -e $HOME/.tmux.conf ]; then

@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-### functions and alias for instalation ###
+### functions and alias for installation ###
 function cecho {
   if [ $OS == 'Lunux' ]; then
     printf "\033[34m$*\033[0m\n";
@@ -45,6 +45,7 @@ cecho "Starting uninstall vim dotfiles"
 
 # recovery the vim files
 cp $HOME/.vimrc.backup $HOME/.vimrc
+cp $HOME/.vim.backup $HOME/.vim
 
 ###
 # Uninstall Git dotfiles
