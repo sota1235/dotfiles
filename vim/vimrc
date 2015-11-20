@@ -483,3 +483,4 @@ map <silent> [Tag]p :tabprevious<CR>
 " スペルチェック機能
 set spell
 set spelllang=en
+set spelllang+=cjk
