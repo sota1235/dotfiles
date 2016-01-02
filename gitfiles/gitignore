@@ -8,9 +8,13 @@
 
 # Node.js
 node_modules
+npm-debug.log
 
 # bower
 bower_components
 
+# sass
+.sass-cache/
+
 # OS X
-DS_Store
+.DS_Store
