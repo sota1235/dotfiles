@@ -18,6 +18,7 @@
   sst = status -s -b
   co  = checkout
   ci  = commit
+  cl  = clone
   wc  = whatchanged
   fp  = fetch --prune
   wip = commit --allow-empty -m "wip"
