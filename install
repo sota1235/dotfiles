@@ -108,7 +108,7 @@ if [ -e $HOME/.vimrc ]; then
 fi
 
 if [ -e $HOME/.vim ]; then
-  cp $HOME/.vim $HOME/.vim.backup
+  cp -r $HOME/.vim $HOME/.vim.backup
 fi
 
 # make the vim files
