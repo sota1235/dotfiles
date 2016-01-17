@@ -48,6 +48,26 @@ You can specify git user name and e-mail address by add options.
 $ ./install -u {git user name} -e {git e-mail address}
 ```
 
+#### Update
+
+Exec `dot_update` command.
+
+```shell
+$ dot_update
+
+(*'-') < Do you want to update the dotfiles? [y/N]
+```
+
+#### Uninstall
+
+Exec `dot_uninstall` command.
+
+```shell
+$ dot_uninstall
+
+(*;-;) < Do you want to uninstall the dotfiles? [n/Y]
+```
+
 ### Usage
 
 - zsh
