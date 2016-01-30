@@ -1,13 +1,11 @@
 dotfiles
 ====
 
-dotfiles
+dotfiles.
 
 ### Description
 
-発展途上dotfiles
-
-以下の設定ファイルをinstallします
+主に以下の設定ファイルをinstallします
 
 - zsh
 - git
@@ -21,7 +19,7 @@ dotfiles
 - vim7.4
 - tmux
 
-On OS X, you need to insall some library.
+On OS X, you need to install some library.
 
 - coreutils
 
