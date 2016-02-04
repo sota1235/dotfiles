@@ -62,6 +62,7 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'xsbeats/vim-blade'
+NeoBundle 'mxw/vim-jsx'
 
 " VimProc
 NeoBundle 'Shougo/vimproc', {
@@ -495,3 +496,6 @@ map <silent> [Tag]p :tabprevious<CR>
 set spell
 set spelllang=en
 set spelllang+=cjk
+
+" JSXのシンタックスを有効化
+let g:syntastic_javascript_checkers=['jsxhint']
