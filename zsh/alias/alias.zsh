@@ -53,6 +53,16 @@ alias la='ls -lAh'
 # Editor
 alias vi="vim"
 
+# Git
+alias gst="git status"
+alias gl="git log"
+alias gl1="git log --oneline"
+alias gfp="git fetch --prune"
+alias gci="git commit"
+alias gco="git checkout"
+alias wip="git commit --allow-empty -m wip"
+alias gb="git branch"
+
 # Development for git init
 alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
 alias licenseinit="cp $HOME/.dotfiles/template/LICENSE.txt ./LICENSE.txt"
