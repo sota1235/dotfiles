@@ -53,6 +53,9 @@ alias la='ls -lAh'
 # Editor
 alias vi="vim"
 
+# Start tmux with using 256 color mode
+alias tmux="tmux -2"
+
 # Git
 alias gst="git status"
 alias gl="git log"
