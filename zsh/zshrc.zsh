@@ -4,7 +4,7 @@
 
 # tmuxを起動する
 if which tmux > /dev/null 2>&1 ; then
-  [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+  [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux -2
 fi
 
 # キーバインドをEmacs風に
