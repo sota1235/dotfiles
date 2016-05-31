@@ -46,7 +46,6 @@ NeoBundle 'Shougo/unite.vim'
 
 " Syntax
 NeoBundle 'haml.zip'
-NeoBundle 'JavaScript-syntax'
 NeoBundle 'jQuery'
 NeoBundle 'nginx.vim'
 NeoBundle 'tpope/vim-markdown'
@@ -63,6 +62,7 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'mxw/vim-jsx'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 " VimProc
 NeoBundle 'Shougo/vimproc', {
