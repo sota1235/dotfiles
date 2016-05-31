@@ -68,7 +68,7 @@ alias gb="git branch"
 
 # Development for git init
 alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
-alias licenseinit="cp $HOME/.dotfiles/template/LICENSE.txt ./LICENSE.txt"
+alias licenseinit="cat $HOME/.dotfiles/template/LICENSE.txt | sed -e s/YEAR_POSITION/\`date +\"%Y\"\`/ >> ./LICENSE.txt"
 
 # Middleman
 alias newpost="middleman article"
