@@ -1,6 +1,12 @@
 #!/bin/sh
 
 ###
+# Require util shells
+###
+DOTFILES_CURRENT=`dirname ${0}`
+source $DOTFILES_CURRENT/tool/tools.sh
+
+###
 # Functions
 ###
 
@@ -103,13 +109,8 @@ git submodule update
 printf "${BOLD}${BLUE}Starting Vim setup${NORMAL}\n"
 
 # backup the vim files
-if [ -e $HOME/.vimrc ]; then
-  cp $HOME/.vimrc $HOME/.vimrc.backup
-fi
-
-if [ -e $HOME/.vim ]; then
-  cp -r $HOME/.vim $HOME/.vim.backup
-fi
+backupDotFiles .vimrc
+backupDotFiles .vim
 
 # make the vim files
 cp `pwd`/vim/vimrc $HOME/.vimrc
@@ -122,12 +123,8 @@ cp -R `pwd`/vim/vim/* $HOME/.vim/
 printf "${BOLD}${BLUE}Starting Git setup${NORMAL}\n"
 
 # backup the git files
-if [ -e $HOME/.gitconfig ]; then
-  cp $HOME/.gitconfig $HOME/.gitconfig.backup
-fi
-if [ -e $HOME/.gitignore ]; then
-  cp $HOME/.gitignore $HOME/.gitignore.backup
-fi
+backupDotFiles .gitconfig
+backupDotFiles .gitignore
 
 # make the git files
 cp `pwd`/gitfiles/gitignore $HOME/.gitignore
@@ -164,12 +161,8 @@ fi
 printf "${BOLD}${BLUE}Starting zsh setup${NORMAL}\n"
 
 # backup the zsh files
-if [ -e $HOME/.zshrc ]; then
-  cp $HOME/.zshrc  $HOME/.zshrc.backup
-fi
-if [ -e $HOME/.zshenv ]; then
-  cp $HOME/.zshenv $HOME/.zshenv.backup
-fi
+backupDotFiles .zshrc
+backupDotFiles .zshenv
 
 # cp zsh files
 cp `pwd`/zsh/zshrc.zsh $HOME/.zshrc
@@ -192,9 +185,7 @@ fi
 printf "${BOLD}${BLUE}Starting tmux setup${NORMAL}\n"
 
 # backup .tmux.conf
-if [ -e $HOME/.tmux.conf ]; then
-  cp $HOME/.tmux.conf $HOME/.tmux.conf.backup
-fi
+backupDotFiles .tmux.conf
 
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
