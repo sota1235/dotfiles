@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ###
-# Copy and rename the file, *.backup
+# Copy and rename the file on home directory
 ###
 
 backupDotFiles () {
