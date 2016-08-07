@@ -5,10 +5,16 @@
 ###
 
 backupDotFiles () {
-  TARGET_FILE_NAME=$1
+  TARGET_FILE_NAME=$HOME/$1
+  CP_OPTION=""
 
-  if [ -e $HOME/$TARGET_FILE_NAME ]; then
-    cp $HOME/$TARGET_FILE_NAME $HOME/$TARGET_FILE_NAME.backup
+  # If target is directory.
+  if [ -d $TARGET_FILE_NAME ]; then
+    CP_OPTION="-r"
+  fi
+
+  if [ -e $TARGET_FILE_NAME ]; then
+    cp $CP_OPTION $TARGET_FILE_NAME $TARGET_FILE_NAME.backup
   fi
 
   return
