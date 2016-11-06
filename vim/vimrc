@@ -334,6 +334,11 @@ if has('syntax')
   augroup END
 endif
 
+"
+" Tabの表記を変更
+"
+set listchars=tab:»-,nbsp:%,eol:$
+
 autocmd BufNewFile,BufRead *.json set ft=javascript
 "
 " Status highlight
