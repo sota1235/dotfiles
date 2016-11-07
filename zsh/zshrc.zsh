@@ -289,11 +289,11 @@ log
 ###
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
-HISTTIMEFORMAT='%y/%m/%d %H:%M:%S '
 SAVEHIST=10000
 setopt extended_history
 setopt share_history
 setopt hist_reduce_blanks
+export HISTTIMEFORMAT='%y/%m/%d %H:%M:%S '
 
 ###
 # 外部ファイル読み込み
