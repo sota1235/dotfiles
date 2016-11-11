@@ -1,3 +1,6 @@
 [submodule "zsh/lib/zsh-completions"]
   path = zsh/lib/zsh-completions
   url = git@github.com:zsh-users/zsh-completions.git
+[submodule "ssh/sshrc"]
+  path = ssh/sshrc
+  url = https://github.com/Russell91/sshrc.git
