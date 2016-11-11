@@ -114,6 +114,19 @@ printf "${BOLD}${GREEN}Startging tmux setup${NORMAL}\n"
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
+###
+# sshrc Setup
+###
+
+printf "${BOLD}${GREEN}Starting sshrc setup${NORMAL}\n"
+
+# copy .sshrc
+cp `pwd`/ssh/sshrc_config $HOME/.sshrc
+
+###
+# Completed
+###
+
 printf "${BOLD}${GREEN}Updating is completed${NORMAL}\n"
 
 cd $CURRENT_PATH # return to path command excute

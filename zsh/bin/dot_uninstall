@@ -83,4 +83,17 @@ cecho "Startging uninstalling tmux dotfiles"
 
 cp $HOME/.tmux.conf.backup $HOME/.tmux.conf
 
+###
+# Uninstall sshrc dotfiles
+###
+
+cecho "Startging uninstalling sshrc dotfiles"
+
+cp $HOME/.sshrc.backup $HOME/.sshrc
+cp -r $HOME/.sshrc.d.backup $HOME/.sshrc.d
+
+###
+# Completed
+###
+
 cecho "Uninstalling is completed!! Thanks for using."

@@ -185,6 +185,29 @@ backupDotFiles .tmux.conf
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
+###
+# sshrc Setup
+###
+
+printf "${BOLD}${BLUE}Starting sshrc setup${NORMAL}\n"
+
+# backup the sshrc file and directory
+backupDotFiles .sshrc
+backupDotFiles .sshrc.d
+
+# make directory for sshrc
+mkdir $HOME/.sshrc.d
+
+# copy
+cp `pwd`/ssh/sshrc_config $HOME/.sshrc
+
+# add symbolic link
+ln -s `pwd`/.dotfiles/ssh/sshrc.d $HOME/.sshrc.d
+
+###
+# Completed
+###
+
 printf "${BOLD}${BLUE}Installation is completed${NORMAL}\n"
 
 env zsh
