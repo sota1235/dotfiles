@@ -56,6 +56,9 @@ alias vi="vim"
 # Start tmux with using 256 color mode
 alias tmux="tmux -2"
 
+# for sshrc
+alias sshrc="TERM=xterm sshrc"
+
 # Git
 alias gst="git status"
 alias gl="git log"
