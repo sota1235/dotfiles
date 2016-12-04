@@ -30,6 +30,7 @@ NeoBundle 'Shougo/neobundle.vim'
 " Program
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'AnsiEsc.vim'
+NeoBundle 'mattn/emmet-vim'
 
 " GUI
 NeoBundle 'itchyny/lightline.vim'
