@@ -65,6 +65,7 @@ alias gci="git commit"
 alias gco="git checkout"
 alias wip="git commit --allow-empty -m wip"
 alias gb="git branch"
+alias cdgr='cd $(git rev-parse --show-toplevel)'
 
 # Development for git init
 alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
