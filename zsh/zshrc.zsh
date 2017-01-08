@@ -279,11 +279,6 @@ setopt pushd_ignore_dups
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
 
-## 全てのユーザのログイン・ログアウトを監視
-watch="all"
-# ログイン時に表示
-log
-
 ###
 # History
 ###
