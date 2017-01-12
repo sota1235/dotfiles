@@ -21,7 +21,10 @@ dotfiles.
 
 On OS X, you need to install some library.
 
-- coreutils
+You can install them by using [Homebrew](http://brew.sh).
+
+- coreutil
+- reattach-to-user-namespace
 
 This dotfiles supports the following libraries.
 
