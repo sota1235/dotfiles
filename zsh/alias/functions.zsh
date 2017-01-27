@@ -32,3 +32,15 @@ function aliasadd() {
   echo "alias $1=\"$2\"" >> $HOME/.zsh_alias
   echo "Your own alias is added! Run the 'exec zsh'"
 }
+
+###
+# npm run with slim
+###
+function npmrun() {
+  npm run $1 2>$DOTFILES_NPM_ERROR_LOG
+
+  if [ ! $? -eq 0 ]; then
+    echo "npm error log recorded at $DOTFILES_NPM_ERROR_LOG"
+    return 1
+  fi
+}

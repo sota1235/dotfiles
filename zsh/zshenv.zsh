@@ -8,5 +8,8 @@ if [ -e $HOME/.pyenv ] ; then
   eval "$(pyenv init -)"
 fi
 
-# vimが好き
+# I love vim
 export EDITOR=vim
+
+# for npmrun
+export DOTFILES_NPM_ERROR_LOG="$HOME/.dotfiles/dist/npm_error.log"
