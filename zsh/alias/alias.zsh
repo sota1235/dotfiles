@@ -22,8 +22,6 @@ fi
 # others
 alias -s txt=vim
 if which open > /dev/null 2>&1 ; then
-  alias -s md="open -a Mou"
-  alias -s markdown="open -a Mou"
   alias -s pdf="open"
 fi
 
@@ -70,9 +68,6 @@ alias cdgr='cd $(git rev-parse --show-toplevel)'
 # Development for git init
 alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
 alias licenseinit="cat $HOME/.dotfiles/template/LICENSE.txt | sed -e s/YEAR_POSITION/\`date +\"%Y\"\`/ >> ./LICENSE.txt"
-
-# Middleman
-alias newpost="middleman article"
 
 # Others
 alias grep="grep --color -n"
