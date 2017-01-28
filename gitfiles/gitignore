@@ -21,3 +21,6 @@ bower_components
 
 # PHPStorm
 .idea/
+
+# yarn
+yarn-error.log
