@@ -14,6 +14,7 @@
 [alias]
   l   = log
   b   = branch
+  d   = diff
   st  = status
   sst = status -s -b
   co  = checkout
