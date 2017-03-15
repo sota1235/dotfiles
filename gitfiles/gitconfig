@@ -19,6 +19,7 @@
   sst = status -s -b
   co  = checkout
   ci  = commit
+  ic  = commit
   cl  = clone
   wc  = whatchanged
   fp  = fetch --prune
