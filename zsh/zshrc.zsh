@@ -364,6 +364,9 @@ compinit # fpathの後ろで宣言する必要がある
 # オリジナルコマンド
 export PATH="$HOME/.dotfiles/zsh/bin:$PATH"
 
+# Local bin files
+export PATH="$HOME/.dotfiles/local:$PATH"
+
 # 外部パスファイルの読み込み
 source $HOME/.zsh_own_config
 source $HOME/.zsh_alias
