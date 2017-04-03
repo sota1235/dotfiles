@@ -112,6 +112,18 @@ cp `pwd`/vim/vimrc $HOME/.vimrc
 cp -R `pwd`/vim/vim/* $HOME/.vim/
 
 ###
+# PHPStorm IdeaVim Setup
+###
+
+printf "${BOLD}${BLUE}Starting IdeaVim setup${NORMAL}\n"
+
+# backup the vim files
+backupDotFiles .ideavimrc
+
+# make the vim files
+cp `pwd`/phpstorm/ideavimrc $HOME/.ideavimrc
+
+###
 # Git Setup
 ###
 

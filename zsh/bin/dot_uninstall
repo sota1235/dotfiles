@@ -48,6 +48,15 @@ cp $HOME/.vimrc.backup $HOME/.vimrc
 cp $HOME/.vim.backup $HOME/.vim
 
 ###
+# Uninstall IdeaVim dotfiles
+###
+
+cecho "Starting uninstall IdeaVim dotfiles"
+
+# recovery the IdeaVim files
+cp $HOME/.ideavimrc.backup $HOME/.ideavimrc
+
+###
 # Uninstall Git dotfiles
 ###
 

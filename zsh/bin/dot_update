@@ -85,6 +85,15 @@ cp `pwd`/vim/vimrc $HOME/.vimrc
 cp -R `pwd`/vim/vim $HOME/.vim
 
 ###
+# IdeaVim Setup
+###
+
+printf "${BOLD}${GREEN}Starting IdeaVim updating${NORMAL}\n"
+
+# make the IdeaVim files
+cp `pwd`/phpstorm/ideavimrc $HOME/.ideavimrc
+
+###
 # Git Setup
 ###
 
