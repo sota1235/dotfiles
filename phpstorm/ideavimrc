@@ -1,4 +1,10 @@
 "
-" Key remap
+" vimrc for PHPStrom IdeaVim
 "
+
+" Key remap
 nnoremap ; :
+
+" Splitting screen shortcut
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
