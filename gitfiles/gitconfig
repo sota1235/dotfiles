@@ -15,6 +15,7 @@
   l   = log
   b   = branch
   d   = diff
+  ds  = diff --staged
   st  = status
   sst = status -s -b
   co  = checkout
