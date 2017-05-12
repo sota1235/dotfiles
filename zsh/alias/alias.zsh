@@ -65,6 +65,19 @@ alias wip="git commit --allow-empty -m wip"
 alias gb="git branch"
 alias cdgr='cd $(git rev-parse --show-toplevel)'
 
+# React Native
+alias rn='react-native'
+alias rns='react-native start'
+alias rnlink='react-native link'
+
+alias rnand='react-native run-android'
+alias rnios='react-native run-ios'
+alias rnios4s='react-native run-ios --simulator "iPhone 4s"'
+alias rnios5='react-native run-ios --simulator "iPhone 5"'
+alias rnios5s='react-native run-ios --simulator "iPhone 5s"'
+alias rnios6='react-native run-ios --simulator "iPhone 6"'
+alias rnios6s='react-native run-ios --simulator "iPhone 6s"'
+
 # Development for git init
 alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
 alias licenseinit="cat $HOME/.dotfiles/template/LICENSE.txt | sed -e s/YEAR_POSITION/\`date +\"%Y\"\`/ >> ./LICENSE.txt"
