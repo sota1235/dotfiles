@@ -90,7 +90,7 @@ fi
 alias find_grep="find ./ -type f -print | xargs grep -n"
 alias todo="find ./ -type f -print | xargs grep -n --color TODO"
 alias history="history -i"
-alias keynotesyntax"highlight -O rtf -s earendel -K 27 -k 'Courier'"
+alias keynotesyntax="highlight -O rtf -s earendel -K 27 -k 'Courier'"
 
 alias e="exit"
 alias g="git"
