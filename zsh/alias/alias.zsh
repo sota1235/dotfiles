@@ -29,6 +29,7 @@ fi
 alias -g @g='| grep'
 alias -g @l='| less -R'
 alias -g @le='|& less -R'
+alias -g @cb='| pbcopy'
 
 # Super user
 alias _="sudo"
