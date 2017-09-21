@@ -64,6 +64,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'mxw/vim-jsx'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'editorconfig/editorconfig-vim'
 
 " VimProc
 NeoBundle 'Shougo/vimproc', {
