@@ -49,6 +49,9 @@ alias l='ls -lh'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
+# Default mv option
+alias mv='mv -i'
+
 # Editor
 alias vi="vim"
 
