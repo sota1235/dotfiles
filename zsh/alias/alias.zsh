@@ -96,6 +96,7 @@ alias todo="find ./ -type f -print | xargs grep -n --color TODO"
 alias history="history -i"
 alias keynotesyntax="highlight -O rtf -s earendel -K 27 -k 'Courier'"
 alias keynotesyntaxwhite="highlight -O rtf -s andes -K 27 -k 'Courier'"
+alias unixtime="date +%s"
 
 alias e="exit"
 alias g="git"
