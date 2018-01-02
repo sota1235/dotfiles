@@ -1,3 +1,5 @@
 #!/bin/sh
 
-$HOME/.dotfiles/init/macos/Brewfile.sh
+if which brew > /dev/null 2>&1 ; then
+  $HOME/.dotfiles/init/macos/Brewfile.sh
+fi
