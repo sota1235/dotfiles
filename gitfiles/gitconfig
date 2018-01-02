@@ -22,8 +22,9 @@
   ci  = commit
   ic  = commit
   cl  = clone
-  wc  = whatchanged
+  gg  = grep
   fp  = fetch --prune
+  wc  = whatchanged
   wip = commit --allow-empty -m "wip"
   dmb = "!git branch --merged|egrep -v 'develop|master'|xargs git branch -d"
   alias  = "!git config --list|grep ^alias.|cut -c 7-"
