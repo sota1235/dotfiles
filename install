@@ -191,6 +191,18 @@ backupDotFiles .tmux.conf
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
+###
+# OS dependency
+###
+
+if [ ${OS} = "Mac" ]; then
+  `pwd`/init/macos.sh
+fi
+
+###
+# Exit
+###
+
 printf "${BOLD}${BLUE}Installation is completed${NORMAL}\n"
 
 env zsh
