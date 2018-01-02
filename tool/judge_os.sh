@@ -1,7 +1,8 @@
 #!/bin/sh
 
-###
+##
 # Judging OS and return it
+##
 judge_os () {
   if [ "$(uname)" == 'Darwin' ]; then
     echo 'Mac'

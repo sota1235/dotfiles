@@ -5,3 +5,4 @@
 ###
 source tool/backup.sh
 source tool/judge_os.sh
+source tool/usage_exit.sh
