@@ -33,3 +33,4 @@
   lall   = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
   today  = "!git log --reverse --no-merges --branches=* --date=local --since=midnight --oneline --author=\"`git config --get user.name`\""
   pom = push origin master
+  poc = push origin HEAD
