@@ -87,7 +87,7 @@ alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
 alias licenseinit="cat $HOME/.dotfiles/template/LICENSE.txt | sed -e s/YEAR_POSITION/\`date +\"%Y\"\`/ >> ./LICENSE.txt"
 
 # Docker
-alias docker-ps-name="docker ps | awk '{print $NF}'"
+alias docker-ps-name="docker ps | awk '{print \$NF}'"
 
 # Others
 alias grep="grep --color -n"
