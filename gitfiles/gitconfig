@@ -22,6 +22,7 @@
   ci  = commit
   ic  = commit
   cl  = clone
+  cp  = cherry-pick
   gg  = grep
   fp  = fetch --prune
   wc  = whatchanged
