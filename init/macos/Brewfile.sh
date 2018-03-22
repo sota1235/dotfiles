@@ -13,3 +13,4 @@ brew install tmux
 brew install mycli
 brew install yarn
 brew install zsh
+brew install heroku/brew/heroku
