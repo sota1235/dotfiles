@@ -5,7 +5,7 @@ dotfiles.
 
 ### Description
 
-主に以下の設定ファイルをinstallします
+dotfiles for using that.
 
 - zsh
 - git
