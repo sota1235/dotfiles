@@ -20,6 +20,7 @@ brew install htop
 brew install jq
 brew install wget
 brew install coreutils
+brew install tree
 
 brew tap caskroom/cask
 
