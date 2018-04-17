@@ -50,3 +50,4 @@ mas install 539883307   # LINE
 mas install 1287239339  # ColorSlurp
 mas install 585829637   # Todoist
 mas install 441258766   # Magnet
+mas install 497799835   # XCode
