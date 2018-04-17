@@ -19,6 +19,7 @@ brew install ffmpeg
 brew install htop
 brew install jq
 brew install wget
+brew install coreutils
 
 brew tap caskroom/cask
 
