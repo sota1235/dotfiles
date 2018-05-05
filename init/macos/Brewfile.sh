@@ -40,6 +40,7 @@ brew cask install zeplin
 brew cask install tunnelblick
 brew cask install alfred
 brew cask install firefox
+brew cask install hammerspoon
 
 brew install mas
 
