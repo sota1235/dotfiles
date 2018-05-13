@@ -21,6 +21,7 @@ brew install jq
 brew install wget
 brew install coreutils
 brew install tree
+brew install youtube-dl
 
 brew tap caskroom/cask
 
