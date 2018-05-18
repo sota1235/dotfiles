@@ -11,6 +11,7 @@ brew install tig
 brew install highlight
 brew install mosh
 brew install tmux
+brew install mysql
 brew install mycli
 brew install yarn
 brew install zsh
