@@ -104,3 +104,6 @@ alias unixtime="date +%s"
 alias e="exit"
 alias g="git"
 alias b="brew"
+
+# Homebrew
+alias brews='brew update && brew upgrade && brew cleanup; brew cask cleanup; brew doctor'
