@@ -23,6 +23,7 @@ brew install wget
 brew install coreutils
 brew install tree
 brew install youtube-dl
+brew install bat
 
 brew tap caskroom/cask
 
