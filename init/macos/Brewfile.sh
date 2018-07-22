@@ -24,6 +24,7 @@ brew install coreutils
 brew install tree
 brew install youtube-dl
 brew install bat
+brew install reattach-to-user-namespace
 
 brew tap caskroom/cask
 

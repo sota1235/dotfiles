@@ -107,3 +107,6 @@ alias b="brew"
 
 # Homebrew
 alias brews='brew update && brew upgrade && brew cleanup; brew cask cleanup; brew doctor'
+
+# macOS
+alias open='reattach-to-user-namespace open'
