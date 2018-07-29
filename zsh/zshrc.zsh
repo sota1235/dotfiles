@@ -379,3 +379,6 @@ source $HOME/.zsh_alias
 
 # http://qiita.com/kwgch/items/445a230b3ae9ec246fcb
 setopt nonomatch
+
+# For golang
+export GOPATH=$HOME/go
