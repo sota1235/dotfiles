@@ -28,10 +28,12 @@ brew install reattach-to-user-namespace
 brew install kubernetes-cli
 
 brew tap caskroom/cask
+brew tap caskroom/versions
 
 brew cask install iterm2
 brew cask install docker
 brew cask install google-chrome
+brew cask install google-chrome-canary
 brew cask install google-japanese-ime
 brew cask install sequel-pro
 brew cask install insomnia
