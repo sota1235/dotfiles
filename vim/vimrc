@@ -65,6 +65,7 @@ NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'mxw/vim-jsx'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'Quramy/tsuquyomi'
 
 " VimProc
 NeoBundle 'Shougo/vimproc', {
