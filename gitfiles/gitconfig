@@ -11,6 +11,8 @@
   pager        = less
   excludesfile = ~/.gitignore
   autocrlf     = input
+[diff]
+  indentHeuristic = true
 [alias]
   l   = log
   b   = branch
