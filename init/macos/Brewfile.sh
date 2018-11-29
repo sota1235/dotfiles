@@ -26,6 +26,7 @@ brew install youtube-dl
 brew install bat
 brew install reattach-to-user-namespace
 brew install kubernetes-cli
+brew install kubectx
 
 brew tap caskroom/cask
 brew tap caskroom/versions
