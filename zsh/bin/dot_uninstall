@@ -92,4 +92,12 @@ cecho "Startging uninstalling tmux dotfiles"
 
 cp $HOME/.tmux.conf.backup $HOME/.tmux.conf
 
+###
+# Uninstall nodebrew
+###
+
+cecho "Startging uninstalling nodebrew"
+
+rm -rf ~/.nodebrew
+
 cecho "Uninstalling is completed!! Thanks for using."

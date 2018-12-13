@@ -386,3 +386,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 # For golang
 export GOPATH=$HOME/go
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH

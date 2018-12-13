@@ -13,3 +13,5 @@ $HOME/.dotfiles/init/macos/os_setup.sh
 # Create custom apps
 $HOME/.dotfiles/init/macos/nativefier.sh
 
+# Install nodebrew
+curl -L git.io/nodebrew | perl - setup
