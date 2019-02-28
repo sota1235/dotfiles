@@ -27,6 +27,7 @@ brew install bat
 brew install reattach-to-user-namespace
 brew install kubernetes-cli
 brew install kubectx
+brew install dep
 
 brew tap caskroom/cask
 brew tap caskroom/versions
