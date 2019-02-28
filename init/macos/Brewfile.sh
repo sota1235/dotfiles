@@ -28,6 +28,7 @@ brew install reattach-to-user-namespace
 brew install kubernetes-cli
 brew install kubectx
 brew install dep
+brew install terminal-notifier
 
 brew tap caskroom/cask
 brew tap caskroom/versions
