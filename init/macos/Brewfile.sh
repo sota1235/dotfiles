@@ -29,6 +29,8 @@ brew install kubernetes-cli
 brew install kubectx
 brew install dep
 brew install terminal-notifier
+brew install gnupg
+brew install pinentry-mac
 
 brew tap caskroom/cask
 brew tap caskroom/versions
