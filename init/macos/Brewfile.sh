@@ -52,7 +52,6 @@ brew cask install zeplin
 brew cask install tunnelblick
 brew cask install alfred
 brew cask install firefox
-brew cask install hammerspoon
 brew cask install vlc
 
 brew install mas
