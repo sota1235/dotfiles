@@ -14,17 +14,7 @@ dotfiles for using that.
 
 ### Requirement
 
-- zsh
-- git
-- vim7.4
-- tmux
-
-On OS X, you need to install some library.
-
-You can install them by using [Homebrew](http://brew.sh).
-
-- coreutil
-- reattach-to-user-namespace
+- [Homebrew](http://brew.sh)
 
 This dotfiles supports the following libraries.
 
@@ -76,8 +66,6 @@ $ dot_uninstall
 ![](https://i.gyazo.com/1404f537852307201b80d4477ea7e415.png)
 
 - vim
-
-Thanks for [nikezono/dotfiles](https://github.com/nikezono/dotfiles)
 
 ![](https://i.gyazo.com/7601ffa462abb53abb8034f60c842121.png)
 
