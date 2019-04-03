@@ -53,6 +53,7 @@ brew cask install tunnelblick
 brew cask install alfred
 brew cask install firefox
 brew cask install vlc
+brew cask install dropbox
 
 brew install mas
 
