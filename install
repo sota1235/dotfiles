@@ -72,7 +72,7 @@ done
 ###
 # judge OS
 ###
-OS=judge_os
+OS=`judge_os`
 
 if [ ! $? -eq 0 ]; then
   exit 1
