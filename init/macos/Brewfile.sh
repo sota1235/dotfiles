@@ -54,6 +54,7 @@ brew cask install alfred
 brew cask install firefox
 brew cask install vlc
 brew cask install dropbox
+brew cask install gyazo
 
 brew install mas
 
@@ -62,6 +63,5 @@ mas install 443987910   # 1Password
 mas install 803453959   # Slack
 mas install 539883307   # LINE
 mas install 1287239339  # ColorSlurp
-mas install 585829637   # Todoist
 mas install 441258766   # Magnet
 mas install 497799835   # XCode
