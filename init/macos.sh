@@ -6,3 +6,7 @@ fi
 
 # Setting up system preference
 $HOME/.dotfiles/init/macos/os_setup.sh
+
+# Create custom apps
+$HOME/.dotfiles/init/macos/nativefier.sh
+
