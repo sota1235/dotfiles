@@ -55,6 +55,7 @@ brew cask install firefox
 brew cask install vlc
 brew cask install dropbox
 brew cask install gyazo
+brew cask install google-cloud-sdk
 
 brew install mas
 
