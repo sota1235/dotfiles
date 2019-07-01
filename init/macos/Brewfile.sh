@@ -31,6 +31,7 @@ brew install dep
 brew install terminal-notifier
 brew install gpg2
 brew install pinentry-mac
+brew install terraform
 
 brew tap caskroom/cask
 brew tap caskroom/versions
