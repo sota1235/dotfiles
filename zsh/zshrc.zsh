@@ -337,6 +337,8 @@ if [ -e $HOME/.nvm ]; then
 fi
 
 ### peco ###
+
+# Searching history
 if which peco > /dev/null 2>&1 ; then
   function peco-select-history() {
   local tac
@@ -354,6 +356,18 @@ if which peco > /dev/null 2>&1 ; then
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 fi
+
+# ghq
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^g' peco-src
 
 ### composer global commands ###
 if [ -e $HOME/.composer ]; then
