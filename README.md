@@ -12,16 +12,20 @@ dotfiles for using that.
 - vim
 - tmux
 
-### Requirement
-
-- [Homebrew](http://brew.sh)
-
 This dotfiles supports the following libraries.
 
 - [pyenv](https://github.com/yyuu/pyenv)
 - [rbenv](https://github.com/sstephenson/rbenv)
 - [nvm](https://github.com/creationix/nvm)
 - [peco](https://github.com/peco/peco)
+
+### Requirement
+
+- bash
+
+#### for macOS
+
+- [Homebrew](http://brew.sh)
 
 ### Install
 
