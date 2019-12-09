@@ -33,6 +33,7 @@ brew install gpg2
 brew install pinentry-mac
 brew install terraform
 brew install ghq
+brew install direnv
 
 brew tap caskroom/cask
 brew tap caskroom/versions
