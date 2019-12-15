@@ -34,6 +34,7 @@ brew install pinentry-mac
 brew install terraform
 brew install ghq
 brew install direnv
+brew install rmtrash
 
 brew tap caskroom/cask
 brew tap caskroom/versions
