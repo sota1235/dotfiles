@@ -30,3 +30,6 @@ yarn-error.log
 
 # phpenv
 .php-version
+
+# Redis
+dump.rdb
