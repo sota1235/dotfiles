@@ -189,9 +189,6 @@ add-zsh-hook precmd _update_vcs_info_msg
 # もしかして機能
 setopt correct
 
-# PCRE互換の正規表現を使う
-setopt re_match_pcre
-
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
 
