@@ -9,7 +9,6 @@ brew install git-extras
 brew install peco
 brew install tig
 brew install highlight
-brew install mosh
 brew install tmux
 brew install mysql
 brew install mycli
@@ -36,30 +35,26 @@ brew install ghq
 brew install direnv
 brew install rmtrash
 
-brew tap caskroom/cask
-brew tap caskroom/versions
-
 brew cask install iterm2
 brew cask install docker
 brew cask install google-chrome
-brew cask install google-chrome-canary
 brew cask install google-japanese-ime
 brew cask install sequel-pro
 brew cask install insomnia
 brew cask install appcleaner
 brew cask install spotify
 brew cask install sketch
-brew cask install visual-studio-codeA
+brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 brew cask install karabiner-elements
 brew cask install zeplin
-brew cask install tunnelblick
 brew cask install alfred
 brew cask install firefox
 brew cask install vlc
 brew cask install dropbox
 brew cask install gyazo
 brew cask install google-cloud-sdk
+brew cask install notion
 
 brew install mas
 
