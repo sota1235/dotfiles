@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installing Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 if which brew > /dev/null 2>&1 ; then
   $HOME/.dotfiles/init/macos/Brewfile.sh
