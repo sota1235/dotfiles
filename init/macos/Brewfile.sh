@@ -35,6 +35,7 @@ brew install ghq
 brew install direnv
 brew install rmtrash
 brew install circleci
+brew install anyenv
 
 brew cask install iterm2
 brew cask install docker
