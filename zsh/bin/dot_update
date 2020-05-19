@@ -75,16 +75,6 @@ else
 fi
 
 ###
-# Vim Setup
-###
-
-printf "${BOLD}${GREEN}Starting Vim updating${NORMAL}\n"
-
-# make the vim files
-cp `pwd`/vim/vimrc $HOME/.vimrc
-cp -R `pwd`/vim/vim $HOME/.vim
-
-###
 # IdeaVim Setup
 ###
 

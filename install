@@ -102,11 +102,11 @@ backupDotFiles .vimrc
 backupDotFiles .vim
 
 # make the vim files
-cp `pwd`/vim/vimrc $HOME/.vimrc
-cp -R `pwd`/vim/vim/* $HOME/.vim/
+ln -s `pwd`/vim/vimrc ~/.vimrc
+ln -s `pwd`/vim/vimfiles ~/.vim
 
 ###
-# PHPStorm IdeaVim Setup
+# Intelij IdeaVim Setup
 ###
 
 printf "${BOLD}${BLUE}Starting IdeaVim setup${NORMAL}\n"
