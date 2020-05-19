@@ -57,6 +57,7 @@ brew cask install dropbox
 brew cask install gyazo
 brew cask install google-cloud-sdk
 brew cask install notion
+brew cask install clipy
 
 brew install mas
 
