@@ -36,6 +36,7 @@ brew install direnv
 brew install rmtrash
 brew install circleci
 brew install anyenv
+brew install awscli
 
 brew cask install iterm2
 brew cask install docker
