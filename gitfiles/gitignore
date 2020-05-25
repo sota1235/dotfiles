@@ -36,3 +36,6 @@ dump.rdb
 
 # MySQL Workbench
 *.mwb.bak
+
+# direnv
+.envrc
