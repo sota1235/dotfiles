@@ -400,3 +400,7 @@ export GOPATH=$HOME/go
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# direnv
+export EDITOR=vim
+eval "$(direnv hook zsh)"
