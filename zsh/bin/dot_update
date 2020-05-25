@@ -94,17 +94,6 @@ cp `pwd`/gitfiles/gitignore ~/.gitignore
 cp `pwd`/gitfiles/gitconfig ~/.gitconfig
 
 ###
-# Zsh Setup
-###
-
-# include alias.zsh
-printf "${BOLD}${GREEN}Starting zsh setup${NORMAL}\n"
-
-# cp zsh files
-cp `pwd`/zsh/zshrc.zsh ~/.zshrc
-cp `pwd`/zsh/zshenv.zsh ~/.zshenv
-
-###
 # tmux Setup
 ###
 

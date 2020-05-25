@@ -44,8 +44,10 @@ fi
 cecho "Starting uninstall vim dotfiles"
 
 # recovery the vim files
+rm $HOME/.vimrc
+rm -rf $HOME/.vim
 cp $HOME/.vimrc.backup $HOME/.vimrc
-cp $HOME/.vim.backup $HOME/.vim
+cp -r $HOME/.vim.backup $HOME/.vim
 
 ###
 # Uninstall IdeaVim dotfiles
@@ -75,6 +77,8 @@ fi
 
 cecho "Starting uninstalling zsh dotfiles"
 
+rm $HOME/.zshrc
+rm $HOME/.zshenv
 cp $HOME/.zshrc.backup  $HOME/.zshrc
 cp $HOME/.zshenv.backup $HOME/.zshenv
 if [ -e $HOME/.zsh_own_config ]; then

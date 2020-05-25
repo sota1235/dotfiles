@@ -165,9 +165,9 @@ printf "${BOLD}${BLUE}Starting zsh setup${NORMAL}\n"
 backupDotFiles .zshrc
 backupDotFiles .zshenv
 
-# cp zsh files
-cp `pwd`/zsh/zshrc.zsh $HOME/.zshrc
-cp `pwd`/zsh/zshenv.zsh $HOME/.zshenv
+# create symlink
+ln -s `pwd`/zsh/zshrc.zsh $HOME/.zshrc
+ln -s `pwd`/zsh/zshenv.zsh $HOME/.zshenv
 
 # make PATH file
 if [ ! -e $HOME/.zsh_own_config ]; then
