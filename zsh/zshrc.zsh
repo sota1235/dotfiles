@@ -80,6 +80,9 @@ if is-at-least 4.3.11; then
   return 0
 }
 
+# 重複するhistoryを持たない
+setopt HIST_IGNORE_ALL_DUPS
+
 # untracked ファイル表示
 #
 # untracked ファイル(バージョン管理されていないファイル)がある場合は
