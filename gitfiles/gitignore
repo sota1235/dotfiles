@@ -25,9 +25,6 @@ bower_components
 # yarn
 yarn-error.log
 
-# ndenv
-.node-version
-
 # phpenv
 .php-version
 
