@@ -12,6 +12,7 @@ brew install highlight
 brew install tmux
 brew install mysql
 brew install mycli
+brew install pgcli
 brew install yarn
 brew install zsh
 brew install heroku/brew/heroku
@@ -24,8 +25,6 @@ brew install tree
 brew install youtube-dl
 brew install bat
 brew install reattach-to-user-namespace
-brew install kubernetes-cli
-brew install kubectx
 brew install dep
 brew install terminal-notifier
 brew install gpg2
@@ -50,7 +49,6 @@ brew cask install sketch
 brew cask install visual-studio-code
 brew cask install jetbrains-toolbox
 brew cask install karabiner-elements
-brew cask install zeplin
 brew cask install alfred
 brew cask install firefox
 brew cask install vlc
