@@ -29,7 +29,7 @@
   fp  = fetch --prune
   wc  = whatchanged
   wip = commit --allow-empty -m "wip"
-  dmb = "!git branch --merged|egrep -v 'develop|master'|xargs git branch -d"
+  dmb = "!git branch --merged|egrep -v 'develop|master|main'|xargs git branch -d"
   alias  = "!git config --list|grep ^alias.|cut -c 7-"
   l1     = log --oneline
   lgraph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
