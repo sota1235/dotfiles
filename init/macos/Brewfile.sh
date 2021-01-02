@@ -32,7 +32,7 @@ brew install pinentry-mac
 brew install terraform
 brew install ghq
 brew install direnv
-brew install rmtrash
+brew install trash
 brew install circleci
 brew install anyenv
 brew install awscli

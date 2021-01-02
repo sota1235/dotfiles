@@ -110,4 +110,4 @@ alias brews='brew update && brew upgrade && brew cleanup; brew cask cleanup; bre
 
 # macOS
 alias open='reattach-to-user-namespace open'
-alias rm='rmtrash'
+alias rm='trash'
