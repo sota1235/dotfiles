@@ -25,7 +25,6 @@ brew install tree
 brew install youtube-dl
 brew install bat
 brew install reattach-to-user-namespace
-brew install dep
 brew install terminal-notifier
 brew install gpg2
 brew install pinentry-mac
