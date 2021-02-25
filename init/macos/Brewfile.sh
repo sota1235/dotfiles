@@ -33,7 +33,6 @@ brew install ghq
 brew install direnv
 brew install trash
 brew install circleci
-brew install anyenv
 brew install awscli
 brew install pgcli
 
