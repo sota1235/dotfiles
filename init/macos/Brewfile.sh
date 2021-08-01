@@ -38,27 +38,27 @@ brew install anyenv
 brew install awscli
 brew install pgcli
 
-brew cask install iterm2
-brew cask install docker
-brew cask install google-chrome
-brew cask install google-japanese-ime
-brew cask install sequel-pro
-brew cask install insomnia
-brew cask install appcleaner
-brew cask install spotify
-brew cask install sketch
-brew cask install visual-studio-code
-brew cask install jetbrains-toolbox
-brew cask install karabiner-elements
-brew cask install alfred
-brew cask install firefox
-brew cask install vlc
-brew cask install dropbox
-brew cask install gyazo
-brew cask install google-cloud-sdk
-brew cask install notion
-brew cask install clipy
-brew cask install figma
+brew install --cask iterm2
+brew install --cask docker
+brew install --cask google-chrome
+brew install --cask google-japanese-ime
+brew install --cask sequel-pro
+brew install --cask insomnia
+brew install --cask appcleaner
+brew install --cask spotify
+brew install --cask sketch
+brew install --cask visual-studio-code
+brew install --cask jetbrains-toolbox
+brew install --cask karabiner-elements
+brew install --cask alfred
+brew install --cask firefox
+brew install --cask vlc
+brew install --cask dropbox
+brew install --cask gyazo
+brew install --cask google-cloud-sdk
+brew install --cask notion
+brew install --cask clipy
+brew install --cask figma
 
 brew install mas
 
