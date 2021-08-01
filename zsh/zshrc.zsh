@@ -395,8 +395,10 @@ source $HOME/.zsh_alias
 setopt nonomatch
 
 # For google cloud sdk
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+if which gcloud > /dev/null 2>&1 ; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+fi
 
 # For golang
 export GOPATH=$HOME/go
@@ -406,4 +408,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # direnv
 export EDITOR=vim
-eval "$(direnv hook zsh)"
+if which direnv > /dev/null 2>&1 ; then
+  eval "$(direnv hook zsh)"
+fi
