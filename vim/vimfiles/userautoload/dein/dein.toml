@@ -17,9 +17,6 @@ repo = 'Shougo/neocomplete.vim'
 repo = 'mhinz/vim-startify'
 
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-
-[[plugins]]
 repo = 'chriskempson/base16-vim'
 
 [[plugins]]
