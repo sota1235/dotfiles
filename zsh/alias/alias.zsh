@@ -116,11 +116,14 @@ alias unixtime="date +%s"
 
 alias e="exit"
 alias g="git"
-alias b="brew"
 
-# Homebrew
-alias brews='brew update && brew upgrade && brew cleanup; brew cask cleanup; brew doctor'
 
 # macOS
-alias open='reattach-to-user-namespace open'
-alias rm='trash'
+if [[ ${IS_MACOS} = "true" ]]; then
+  # Homebrew
+  alias b="brew"
+  alias brews='brew update && brew upgrade && brew cleanup; brew cask cleanup; brew doctor'
+
+  alias open='reattach-to-user-namespace open'
+  alias rm='trash'
+fi
