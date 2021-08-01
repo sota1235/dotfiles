@@ -3,6 +3,15 @@
 # include functions
 source $HOME/.dotfiles/zsh/alias/functions.zsh
 
+###
+# Checking OS
+###
+if [[ $OSTYPE = "darwin"* ]]; then
+  IS_MACOS="true"
+else
+  IS_MACOS="false"
+fi
+
 ## Suffix aliases ##
 # script language
 alias -s py=python
@@ -38,11 +47,15 @@ alias _="sudo"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# List derectory contents
-if which gls > /dev/null 2>&1 ; then
-  alias ls='gls -GF --color' # On OS X
+# List directory contents
+if [[ ${IS_MACOS} = "true" ]]; then
+  # macOS
+  if which gls > /dev/null 2>&1 ; then
+    alias ls='gls -GF --color'
+  fi
 else
-  alias ls='ls -GF --color' # On Linux
+  # Linux
+  alias ls='ls -GF --color'
 fi
 alias lsa='ls -lah'
 alias l='ls -lh'
