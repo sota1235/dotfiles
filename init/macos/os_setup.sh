@@ -35,5 +35,11 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFin
 defaults write com.apple.AppleMultitouchTrackpad TrackpadRotate -integer 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -integer 1
 
+##
+# Keyboard
+##
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 2
+
 # Done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
