@@ -391,6 +391,11 @@ export PATH="$HOME/.dotfiles/local:$PATH"
 source $HOME/.zsh_own_config
 source $HOME/.zsh_alias
 
+# Homebrew
+if [ -e /opt/homebrew ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
 # http://qiita.com/kwgch/items/445a230b3ae9ec246fcb
 setopt nonomatch
 
