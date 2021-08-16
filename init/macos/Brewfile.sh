@@ -35,6 +35,7 @@ brew install trash
 brew install circleci
 brew install awscli
 brew install pgcli
+brew install gh
 
 brew install --cask iterm2
 brew install --cask docker
