@@ -416,3 +416,8 @@ export EDITOR=vim
 if which direnv > /dev/null 2>&1 ; then
   eval "$(direnv hook zsh)"
 fi
+
+# dart
+if which pub > /dev/null 2>&1 ; then
+  export PATH="$PATH":"$HOME/.pub-cache/bin"
+fi
