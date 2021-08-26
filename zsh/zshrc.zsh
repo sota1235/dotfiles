@@ -400,9 +400,9 @@ fi
 setopt nonomatch
 
 # For google cloud sdk
-if which gcloud > /dev/null 2>&1 ; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+if [ -e /opt/homebrew/Caskroom/google-cloud-sdk ]; then
+  source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
 
 # For golang
