@@ -31,6 +31,7 @@
   fp  = fetch --prune
   wc  = whatchanged
   wip = commit --allow-empty -m "wip"
+  empty = commit --allow-empty -m "empty commit"
   dmb = "!git branch --merged|egrep -v 'develop|master|main'|xargs git branch -d"
   alias  = "!git config --list|grep ^alias.|cut -c 7-"
   l1     = log --oneline
