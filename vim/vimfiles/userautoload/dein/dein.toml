@@ -24,3 +24,10 @@ repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'Quramy/tsuquyomi'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_tf = ['typescript']
