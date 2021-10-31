@@ -36,3 +36,6 @@ dump.rdb
 
 # direnv
 .envrc
+
+# nvm
+.nvmrc
