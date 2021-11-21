@@ -38,7 +38,8 @@ brew install pgcli
 brew install gh
 
 brew install --cask iterm2
-brew install --cask docker
+# Disable until supporting Apple Silicon
+# brew install --cask docker
 brew install --cask google-chrome
 brew install --cask google-japanese-ime
 brew install --cask sequel-pro
