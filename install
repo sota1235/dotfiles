@@ -175,8 +175,6 @@ cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
 if [ ${OS} = "Mac" ]; then
   `pwd`/init/macos.sh
-  brew install composer # TODO: Linux向けにはマニュアルインストールする
-  composer global require hirak/prestissimo
 fi
 
 ###
