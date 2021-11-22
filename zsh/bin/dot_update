@@ -1,34 +1,12 @@
 #!/bin/zsh
 
-# Use colors, but only if connected to a terminal, and that terminal
-# supports them.
-# thanks for oh-my-zsh - https://github.com/robbyrussell/oh-my-zsh
-tput=$(which tput)
-if [ -n "$tput" ]; then
-    ncolors=$($tput colors)
-fi
-if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
-  RED="$(tput setaf 1)"
-  GREEN="$(tput setaf 2)"
-  YELLOW="$(tput setaf 3)"
-  BLUE="$(tput setaf 4)"
-  BOLD="$(tput bold)"
-  NORMAL="$(tput sgr0)"
-else
-  RED=""
-  GREEN=""
-  YELLOW=""
-  BLUE=""
-  BOLD=""
-  NORMAL=""
-fi
+###
+# Require utils
+###
+source $HOME/.dotfiles/tool/tools.sh
 
-# GNUとBSDのsedの挙動の違いを吸収
-if sed --version 2>/dev/null | grep -q GNU; then
-  alias sedi='sed -i '
-else
-  alias sedi='sed -i "" '
-fi
+# Load colors
+load_colors
 
 ###
 # Start install
@@ -44,16 +22,7 @@ fi
 ###
 # judge OS
 ###
-if [ "$(uname)"=='Darwin' ]; then
-  OS='Mac'
-elif [ "$(expr substr $(uname -s) 1 5)"=='Linux' ]; then
-  OS='Linux'
-elif [ "$(expr substr $(uname -s) 1 10)"=='MINGW32_NT' ]; then
-  OS='Cygwin'
-else
-  echo "Your platform ($(uname -a)) is not supported."
-  exit 1
-fi
+OS=`judge_os`
 
 ###
 # Cloning latest dotfiles
