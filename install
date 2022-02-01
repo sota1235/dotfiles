@@ -28,9 +28,9 @@ printf "${NORMAL}"
 while getopts u:e: OPT
 do
   case $OPT in
-    u) GIT_NAME=$OPTARG
+    u) GIT_USER_NAME=$OPTARG
       ;;
-    e) GIT_MAIL=$OPTARG
+    e) GIT_EMAIL_ADDRESS=$OPTARG
       ;;
     :|\?) usage_exit
       ;;
@@ -101,25 +101,23 @@ cp `pwd`/gitfiles/gitconfig $HOME/.gitconfig
 
 # make original gitconfig_local file
 if [ ! -e $HOME/.gitconfig_local ]; then
-  if [ ! -n "$GIT_NAME" ]; then
+  if [ ! -n "$GIT_USER_NAME" ]; then
     printf "${YELLOW}Please enter your git name${NORMAL}\n"
     printf "${BOLD}${YELLOW}> ${NORMAL}"
-    read GIT_NAME
+    read GIT_USER_NAME
   else
-    printf "${YELLOW}Your git name is $GIT_NAME${NORMAL}\n"
+    printf "${YELLOW}Your git name is $GIT_USER_NAME${NORMAL}\n"
   fi
 
-  if [ ! -n "$GIT_MAIL" ]; then
+  if [ ! -n "$GIT_EMAIL_ADDRESS" ]; then
     printf "${YELLOW}Please enter your git e-mail address${NORMAL}\n"
     printf "${BOLD}${YELLOW}> ${NORMAL}"
-    read GIT_MAIL
+    read GIT_EMAIL_ADDRESS
   else
-    printf "${YELLOW}Your git e-mail address is $GIT_MAIL${NORMAL}\n"
+    printf "${YELLOW}Your git e-mail address is $GIT_EMAIL_ADDRESS${NORMAL}\n"
   fi
 
-  cp `pwd`/gitfiles/gitconfig_local $HOME/.gitconfig_local
-  sed -i '' s/{git_user_name}/${GIT_NAME}/g     $HOME/.gitconfig_local
-  sed -i '' s/{git_email_address}/${GIT_MAIL}/g $HOME/.gitconfig_local
+  envsubst < `pwd`/gitfiles/gitconfig_local > $HOME/.gitconfig_local
 fi
 
 ###
