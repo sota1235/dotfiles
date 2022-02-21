@@ -23,9 +23,6 @@ repo = 'chriskempson/base16-vim'
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
-repo = 'Quramy/tsuquyomi'
-
-[[plugins]]
 repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
