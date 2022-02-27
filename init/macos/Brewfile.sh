@@ -36,6 +36,7 @@ brew install circleci
 brew install awscli
 brew install pgcli
 brew install gh
+brew install ngrok
 
 brew install --cask iterm2
 # Disable until supporting Apple Silicon
