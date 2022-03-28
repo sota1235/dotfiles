@@ -36,6 +36,8 @@ brew install circleci
 brew install awscli
 brew install pgcli
 brew install gh
+brew install ngrok
+brew install imagemagick
 
 brew install --cask iterm2
 # Disable until supporting Apple Silicon
@@ -71,3 +73,4 @@ mas install 1287239339  # ColorSlurp
 mas install 441258766   # Magnet
 mas install 497799835   # XCode
 mas install 490505997   # Skitch
+mas install 405399194   # Kindle
