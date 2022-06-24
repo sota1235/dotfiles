@@ -19,20 +19,18 @@ alias -s rb=ruby
 alias -s php=php
 alias -s pl=perl
 alias -s js=node
-alias -s coffee=coffee
-# image file
+
 if which open > /dev/null 2>&1 ; then
+  # image file
   alias -s png="open"
   alias -s jpg="open"
   alias -s jpeg="open"
   alias -s gif="open"
-fi
-
-# others
-alias -s txt=vim
-if which open > /dev/null 2>&1 ; then
+  # others
   alias -s pdf="open"
 fi
+
+alias -s txt=vim
 
 ## Global aliases ##
 alias -g @g='| grep'
@@ -67,6 +65,7 @@ alias mv='mv -i'
 
 # Editor
 alias vi="vim"
+alias v="vim"
 
 # Start tmux with using 256 color mode
 alias tmux="tmux -2"
