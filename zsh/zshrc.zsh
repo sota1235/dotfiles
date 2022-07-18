@@ -408,6 +408,10 @@ fi
 # For golang
 export GOPATH=$HOME/go
 
+if [ -e $HOME/go/bin ]; then
+  export PATH="$PATH":"$HOME/go/bin"
+fi
+
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
