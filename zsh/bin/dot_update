@@ -41,6 +41,7 @@ if git pull --stat --rebase origin master; then
   printf "${NORMAL}"
 else
   printf "${BOLD}${RED}There was an error updating. Try again later?${NORMAL}\n"
+  exit 1
 fi
 
 ###
