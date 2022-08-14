@@ -7,6 +7,10 @@ if ! which brew > /dev/null 2>&1 ; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   exec $SHELL -l
   $HOME/.dotfiles/init/macos/Brewfile.sh
+
+  # https://github.com/Homebrew/homebrew-autoupdate
+  brew tap homebrew/autoupdate
+  brew autoupdate start
 fi
 
 # Setting up system preference
