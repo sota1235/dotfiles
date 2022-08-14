@@ -63,6 +63,7 @@ brew install --cask clipy
 brew install --cask figma
 brew install --cask shift
 brew install --cask toggl-track
+brew install --cask audacity
 
 brew install mas
 
