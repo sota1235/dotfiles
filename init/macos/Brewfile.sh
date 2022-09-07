@@ -76,3 +76,7 @@ mas install 441258766   # Magnet
 mas install 497799835   # XCode
 mas install 490505997   # Skitch
 mas install 405399194   # Kindle
+
+# auto update
+brew tap homebrew/autoupdate
+brew autoupdate start
