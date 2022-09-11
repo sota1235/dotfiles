@@ -64,6 +64,7 @@ brew install --cask figma
 brew install --cask shift
 brew install --cask toggl-track
 brew install --cask audacity
+brew install --cask asana
 
 brew install mas
 
