@@ -424,3 +424,8 @@ fi
 if which pub > /dev/null 2>&1 ; then
   export PATH="$PATH":"$HOME/.pub-cache/bin"
 fi
+
+# kubectl auto complete
+if which kubectl > /dev/null 2>&1 ; then
+  source <(kubectl completion zsh)
+fi
