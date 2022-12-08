@@ -65,6 +65,8 @@ brew install --cask shift
 brew install --cask toggl-track
 brew install --cask audacity
 brew install --cask asana
+brew install --cask elgato-stream-deck
+brew install --cask vanilla
 
 brew install mas
 
@@ -77,6 +79,7 @@ mas install 441258766   # Magnet
 mas install 497799835   # XCode
 mas install 490505997   # Skitch
 mas install 405399194   # Kindle
+mas install 1429033973  # Runcat
 
 # auto update
 brew tap homebrew/autoupdate
