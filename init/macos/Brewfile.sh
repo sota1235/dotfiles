@@ -15,14 +15,12 @@ brew install mycli
 brew install pgcli
 brew install yarn
 brew install zsh
-brew install heroku/brew/heroku
 brew install ffmpeg
 brew install htop
 brew install jq
 brew install wget
 brew install coreutils
 brew install tree
-brew install youtube-dl
 brew install bat
 brew install reattach-to-user-namespace
 brew install terminal-notifier
@@ -38,6 +36,8 @@ brew install pgcli
 brew install gh
 brew install ngrok
 brew install imagemagick
+brew install deno
+brew install yt-dlp
 
 brew install --cask iterm2
 # Disable until supporting Apple Silicon
@@ -48,7 +48,6 @@ brew install --cask sequel-pro
 brew install --cask insomnia
 brew install --cask appcleaner
 brew install --cask spotify
-brew install --cask sketch
 brew install --cask visual-studio-code
 brew install --cask jetbrains-toolbox
 brew install --cask karabiner-elements
