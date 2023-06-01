@@ -64,11 +64,11 @@ brew install --cask audacity
 brew install --cask asana
 brew install --cask elgato-stream-deck
 brew install --cask vanilla
+brew install --cask 1password
 
 brew install mas
 
 mas install 409183694   # Keynote
-mas install 1333542190  # 1Password
 mas install 803453959   # Slack
 mas install 539883307   # LINE
 mas install 1287239339  # ColorSlurp
