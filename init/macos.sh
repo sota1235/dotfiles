@@ -26,8 +26,3 @@ if ! which nodebrew > /dev/null 2>&1 ; then
   printf "${BOLD}${BLUE}Install nodebrew${NORMAL}\n"
   curl -L git.io/nodebrew | perl - setup
 fi
-
-# Install anyenv-update
-printf "${BOLD}${BLUE}Install anyenv-update${NORMAL}\n"
-mkdir -p $(anyenv root)/plugins
-git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
