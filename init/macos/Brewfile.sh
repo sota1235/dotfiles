@@ -57,10 +57,8 @@ brew install --cask vlc
 brew install --cask dropbox
 brew install --cask gyazo
 brew install --cask google-cloud-sdk
-brew install --cask notion
 brew install --cask clipy
 brew install --cask figma
-brew install --cask shift
 brew install --cask toggl-track
 brew install --cask audacity
 brew install --cask asana
