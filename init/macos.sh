@@ -6,12 +6,16 @@ if ! which brew > /dev/null 2>&1 ; then
 
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   exec $SHELL -l
-  $HOME/.dotfiles/init/macos/Brewfile.sh
+
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zsh_own_config
 
   # https://github.com/Homebrew/homebrew-autoupdate
   brew tap homebrew/autoupdate
   brew autoupdate start
 fi
+
+# Installing apps via HomeBrew
+$HOME/.dotfiles/init/macos/Brewfile.sh
 
 # Setting up system preference
 printf "${BOLD}${BLUE}Update settings of macOS${NORMAL}\n"
