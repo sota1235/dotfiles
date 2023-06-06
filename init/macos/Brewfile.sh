@@ -38,10 +38,10 @@ brew install ngrok
 brew install imagemagick
 brew install deno
 brew install yt-dlp
+brew install docker-compose
 
 brew install --cask iterm2
-# Disable until supporting Apple Silicon
-# brew install --cask docker
+brew install --cask docker
 brew install --cask google-chrome
 brew install --cask google-japanese-ime
 brew install --cask sequel-pro
