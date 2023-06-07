@@ -59,7 +59,6 @@ brew install --cask gyazo
 brew install --cask google-cloud-sdk
 brew install --cask clipy
 brew install --cask figma
-brew install --cask toggl-track
 brew install --cask audacity
 brew install --cask asana
 brew install --cask elgato-stream-deck
@@ -77,6 +76,7 @@ mas install 497799835   # XCode
 mas install 490505997   # Skitch
 mas install 405399194   # Kindle
 mas install 1429033973  # Runcat
+mas install 1291898086  # toggl-track
 
 # auto update
 brew tap homebrew/autoupdate
