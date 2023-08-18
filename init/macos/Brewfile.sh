@@ -64,6 +64,7 @@ brew install --cask asana
 brew install --cask elgato-stream-deck
 brew install --cask vanilla
 brew install --cask 1password
+brew install --cask rambox
 
 brew install mas
 
