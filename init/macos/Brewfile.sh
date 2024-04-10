@@ -39,6 +39,7 @@ brew install imagemagick
 brew install deno
 brew install yt-dlp
 brew install docker-compose
+brew install jnv
 
 brew install --cask iterm2
 brew install --cask docker
