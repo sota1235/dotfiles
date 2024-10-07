@@ -26,7 +26,6 @@ brew install reattach-to-user-namespace
 brew install terminal-notifier
 brew install gpg2
 brew install pinentry-mac
-brew install terraform
 brew install ghq
 brew install direnv
 brew install trash
@@ -40,6 +39,10 @@ brew install deno
 brew install yt-dlp
 brew install docker-compose
 brew install jnv
+
+# terraform refs https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 
 brew install --cask iterm2
 brew install --cask docker
