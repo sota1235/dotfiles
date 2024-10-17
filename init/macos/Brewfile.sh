@@ -34,7 +34,6 @@ brew install imagemagick
 brew install deno
 brew install yt-dlp
 brew install jnv
-brew install sheldon
 
 # terraform refs https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 brew tap hashicorp/tap

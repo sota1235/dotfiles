@@ -211,6 +211,20 @@ PROMPT2='[%n]> '
 SPROMPT="%{$fg_bold[red]%}%{$suggest%}(・´ｰ・｀%)? < もしかして %B%r%b %{$fg_bold[red]%}かな? [そう!(y), 違う!(n), a, e]:${reset_color} "
 
 ###
+# zinit
+###
+
+# installation
+# refs https://github.com/zdharma-continuum/zinit?tab=readme-ov-file#manual
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && gh repo clone zdharma-continuum/zinit "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# libs
+zinit light azu/ni.sh
+
+###
 # 補完
 ###
 
@@ -374,10 +388,6 @@ if [ -e $HOME/.composer ]; then
   PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
 
-### zsh-completions ###
-fpath=($HOME/.dotfiles/zsh/lib/zsh-completions/src $fpath)
-compinit # fpathの後ろで宣言する必要がある
-
 ###
 # PATH
 ###
@@ -429,3 +439,5 @@ fi
 if which kubectl > /dev/null 2>&1 ; then
   source <(kubectl completion zsh)
 fi
+
+
