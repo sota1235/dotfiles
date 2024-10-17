@@ -24,21 +24,17 @@ brew install tree
 brew install bat
 brew install reattach-to-user-namespace
 brew install terminal-notifier
-brew install gpg2
-brew install pinentry-mac
 brew install ghq
 brew install direnv
 brew install trash
-brew install circleci
 brew install awscli
 brew install pgcli
 brew install gh
-brew install ngrok
 brew install imagemagick
 brew install deno
 brew install yt-dlp
-brew install docker-compose
 brew install jnv
+brew install sheldon
 
 # terraform refs https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 brew tap hashicorp/tap
