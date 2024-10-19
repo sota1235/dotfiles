@@ -54,12 +54,6 @@ if ! type zsh > /dev/null 2>&1 ; then
 fi
 
 ###
-# install submodule
-###
-git submodule init
-git submodule update
-
-###
 # Vim Setup
 ###
 

@@ -24,28 +24,25 @@ brew install tree
 brew install bat
 brew install reattach-to-user-namespace
 brew install terminal-notifier
-brew install gpg2
-brew install pinentry-mac
-brew install terraform
 brew install ghq
 brew install direnv
 brew install trash
-brew install circleci
 brew install awscli
 brew install pgcli
 brew install gh
-brew install ngrok
 brew install imagemagick
 brew install deno
 brew install yt-dlp
-brew install docker-compose
+brew install jnv
+
+# terraform refs https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 
 brew install --cask iterm2
 brew install --cask docker
 brew install --cask google-chrome
 brew install --cask google-japanese-ime
-brew install --cask sequel-pro
-brew install --cask insomnia
 brew install --cask appcleaner
 brew install --cask spotify
 brew install --cask visual-studio-code
@@ -65,6 +62,7 @@ brew install --cask elgato-stream-deck
 brew install --cask vanilla
 brew install --cask 1password
 brew install --cask rambox
+brew install --cask sequel-ace
 
 brew install mas
 
