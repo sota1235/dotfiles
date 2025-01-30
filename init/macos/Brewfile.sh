@@ -52,10 +52,8 @@ brew install --cask alfred
 brew install --cask firefox
 brew install --cask vlc
 brew install --cask dropbox
-brew install --cask gyazo
 brew install --cask google-cloud-sdk
 brew install --cask clipy
-brew install --cask figma
 brew install --cask audacity
 brew install --cask asana
 brew install --cask elgato-stream-deck
@@ -69,7 +67,6 @@ brew install mas
 mas install 409183694   # Keynote
 mas install 803453959   # Slack
 mas install 539883307   # LINE
-mas install 1287239339  # ColorSlurp
 mas install 441258766   # Magnet
 mas install 497799835   # XCode
 mas install 490505997   # Skitch
