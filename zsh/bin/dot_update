@@ -72,6 +72,20 @@ printf "${BOLD}${GREEN}Startging tmux setup${NORMAL}\n"
 # cp tmux.conf
 cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
+###
+# Claude Setup
+###
+
+printf "${BOLD}${GREEN}Starting Claude setup${NORMAL}\n"
+
+# remove old symlink if exists
+if [ -L $HOME/.claude ]; then
+  rm $HOME/.claude
+fi
+
+# create symlink
+ln -s `pwd`/claude $HOME/.claude
+
 printf "${BOLD}${GREEN}Updating is completed${NORMAL}\n"
 
 cd $CURRENT_PATH # return to path command excute

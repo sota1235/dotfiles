@@ -152,6 +152,18 @@ backupDotFiles .tmux.conf
 cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
 ###
+# Claude Setup
+###
+
+printf "${BOLD}${BLUE}Starting Claude setup${NORMAL}\n"
+
+# backup .claude directory
+backupDotFiles .claude
+
+# create symlink
+ln -s `pwd`/claude $HOME/.claude
+
+###
 # OS dependency
 ###
 
