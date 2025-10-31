@@ -157,11 +157,36 @@ cp `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 
 printf "${BOLD}${BLUE}Starting Claude setup${NORMAL}\n"
 
-# backup .claude directory
-backupDotFiles .claude
+# create .claude directory if not exists
+if [ ! -d $HOME/.claude ]; then
+  mkdir -p $HOME/.claude
+fi
 
-# create symlink
-ln -s `pwd`/claude $HOME/.claude
+# backup .claude/commands directory
+if [ -e $HOME/.claude/commands ] && [ ! -L $HOME/.claude/commands ]; then
+  backupDotFiles .claude/commands
+fi
+
+# remove old symlink if exists
+if [ -L $HOME/.claude/commands ]; then
+  rm $HOME/.claude/commands
+fi
+
+# create symlink for commands directory
+ln -s `pwd`/claude/commands $HOME/.claude/commands
+
+# backup CLAUDE.md if exists
+if [ -e $HOME/.claude/CLAUDE.md ] && [ ! -L $HOME/.claude/CLAUDE.md ]; then
+  backupDotFiles .claude/CLAUDE.md
+fi
+
+# remove old symlink if exists
+if [ -L $HOME/.claude/CLAUDE.md ]; then
+  rm $HOME/.claude/CLAUDE.md
+fi
+
+# create symlink for CLAUDE.md
+ln -s `pwd`/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
 
 ###
 # OS dependency
