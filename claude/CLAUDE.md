@@ -20,6 +20,13 @@ This file provides global guidance to Claude Code across all projects.
 - 簡潔で具体的な内容を記載
 - 必要に応じて詳細を本文に記載
 
+### GitHub Pull Request
+- **必ずdraft pull requestとして作成すること**
+- **自分自身をassigneeに追加すること**
+- **日本語で作成すること**（タイトル、本文ともに）
+- issueを元に作成したpull requestの場合は、`resolve`、`fixes`、`closes`などのキーワードとともにissue linkを本文に貼ること
+  - 例: `Resolves #123` または `Fixes #456`
+
 ## ツール・環境
 
 - シェル: zsh
