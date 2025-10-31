@@ -93,6 +93,32 @@ cecho "Startging uninstalling tmux dotfiles"
 cp $HOME/.tmux.conf.backup $HOME/.tmux.conf
 
 ###
+# Uninstall Claude dotfiles
+###
+
+cecho "Starting uninstalling Claude dotfiles"
+
+# remove commands symlink
+if [ -L $HOME/.claude/commands ]; then
+  rm $HOME/.claude/commands
+fi
+
+# restore backup if exists
+if [ -e $HOME/.claude/commands.backup ]; then
+  cp -r $HOME/.claude/commands.backup $HOME/.claude/commands
+fi
+
+# remove CLAUDE.md symlink
+if [ -L $HOME/.claude/CLAUDE.md ]; then
+  rm $HOME/.claude/CLAUDE.md
+fi
+
+# restore backup if exists
+if [ -e $HOME/.claude/CLAUDE.md.backup ]; then
+  cp $HOME/.claude/CLAUDE.md.backup $HOME/.claude/CLAUDE.md
+fi
+
+###
 # Uninstall nodebrew
 ###
 
