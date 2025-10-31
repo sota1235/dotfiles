@@ -78,13 +78,26 @@ cp `pwd`/tmux/tmux.conf ~/.tmux.conf
 
 printf "${BOLD}${GREEN}Starting Claude setup${NORMAL}\n"
 
-# remove old symlink if exists
-if [ -L $HOME/.claude ]; then
-  rm $HOME/.claude
+# create .claude directory if not exists
+if [ ! -d $HOME/.claude ]; then
+  mkdir -p $HOME/.claude
 fi
 
-# create symlink
-ln -s `pwd`/claude $HOME/.claude
+# remove old symlink if exists
+if [ -L $HOME/.claude/commands ]; then
+  rm $HOME/.claude/commands
+fi
+
+# create symlink for commands directory
+ln -s `pwd`/claude/commands $HOME/.claude/commands
+
+# remove old symlink if exists
+if [ -L $HOME/.claude/CLAUDE.md ]; then
+  rm $HOME/.claude/CLAUDE.md
+fi
+
+# create symlink for CLAUDE.md
+ln -s `pwd`/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
 
 printf "${BOLD}${GREEN}Updating is completed${NORMAL}\n"
 
