@@ -26,6 +26,8 @@ This file provides global guidance to Claude Code across all projects.
 - **日本語で作成すること**（タイトル、本文ともに）
 - issueを元に作成したpull requestの場合は、`resolve`、`fixes`、`closes`などのキーワードとともにissue linkを本文に貼ること
   - 例: `Resolves #123` または `Fixes #456`
+- pull request templateがある場合には必ずそれを利用すること
+  - 複数のテンプレートがある場合は最も適したtemplateを選択してください
 
 ## ツール・環境
 
