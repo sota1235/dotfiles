@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(gh pr:*), Bash(gh api:*), Bash(npm show), Bash(find:*), Bash(npm ls:*)
+description: Resolve dependabot alerts
+---
+
 # Claude コマンド: Resolve Dependabot Alerts
 
 このコマンドは、現在作業しているリポジトリのDependabot alertsを自動的に取得し、可能な範囲で修正を試み、Pull Requestを作成します。
