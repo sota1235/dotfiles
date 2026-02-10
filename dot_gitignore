@@ -39,3 +39,6 @@ dump.rdb
 
 # nvm
 .nvmrc
+
+# Claude Code
+settings.local.json
