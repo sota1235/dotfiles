@@ -1,0 +1,30 @@
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'banyan/recognize_charcode.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+
+[[plugins]]
+repo = 'chriskempson/base16-vim'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_tf = ['typescript']

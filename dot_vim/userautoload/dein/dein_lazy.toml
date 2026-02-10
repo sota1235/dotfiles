@@ -1,0 +1,28 @@
+[[plugins]]
+repo = 'chr4/nginx.vim'
+on_ft = 'nginx'
+
+[[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = 'markdown'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
+repo = 'leshill/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'javascript.jsx']
+
