@@ -42,6 +42,7 @@ brew "trivy"
 brew "go"
 brew "node"
 brew "pyenv"
+brew "mise"
 
 # Terraform
 brew "hashicorp/tap/terraform"
