@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+echo "📦 Installing zinit (zsh plugin manager)..."
+
+# Check if zsh is installed
+if ! which zsh > /dev/null 2>&1 ; then
+  echo "⚠️  zsh is not installed, skipping zinit installation"
+  exit 0
+fi
+
+# Check if zinit is already installed
+if [ -d "${HOME}/.local/share/zinit/zinit.git" ]; then
+  echo "✅ zinit is already installed"
+  exit 0
+fi
+
+# Install zinit
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+echo "✨ zinit installation completed!"

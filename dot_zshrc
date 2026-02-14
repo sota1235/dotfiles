@@ -214,11 +214,8 @@ SPROMPT="%{$fg_bold[red]%}%{$suggest%}(・´ｰ・｀%)? < もしかして %B%r%
 # zinit
 ###
 
-# installation
-# refs https://github.com/zdharma-continuum/zinit?tab=readme-ov-file#manual
+# zinit plugin manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && gh repo clone zdharma-continuum/zinit "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # libs
