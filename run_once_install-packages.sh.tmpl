@@ -18,6 +18,10 @@ else
   echo "✅ Homebrew is already installed"
 fi
 
+# Disable Homebrew analytics
+echo "🔒 Disabling Homebrew analytics..."
+brew analytics off
+
 # Update and upgrade Homebrew
 echo "🔄 Updating Homebrew..."
 brew update
