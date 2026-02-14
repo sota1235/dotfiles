@@ -1,0 +1,83 @@
+# Taps
+tap "hashicorp/tap"
+tap "homebrew/autoupdate"
+
+# CLI tools
+brew "chezmoi"
+brew "gist"
+brew "git"
+brew "git-extras"
+brew "peco"
+brew "tig"
+brew "highlight"
+brew "tmux"
+brew "mysql"
+brew "mycli"
+brew "pgcli"
+brew "yarn"
+brew "zsh"
+brew "ffmpeg"
+brew "htop"
+brew "jq"
+brew "wget"
+brew "coreutils"
+brew "tree"
+brew "bat"
+brew "reattach-to-user-namespace"
+brew "terminal-notifier"
+brew "ghq"
+brew "direnv"
+brew "trash"
+brew "awscli"
+brew "gh"
+brew "imagemagick"
+brew "deno"
+brew "yt-dlp"
+brew "jnv"
+
+# Development tools
+brew "shellcheck"
+brew "hadolint"
+brew "trivy"
+brew "go"
+brew "node"
+brew "pyenv"
+
+# Terraform
+brew "hashicorp/tap/terraform"
+
+# Mac App Store CLI
+brew "mas"
+
+# GUI applications
+cask "iterm2"
+cask "docker"
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "appcleaner"
+cask "spotify"
+cask "visual-studio-code"
+cask "jetbrains-toolbox"
+cask "karabiner-elements"
+cask "alfred"
+cask "firefox"
+cask "vlc"
+cask "dropbox"
+cask "google-cloud-sdk"
+cask "clipy"
+cask "audacity"
+cask "elgato-stream-deck"
+cask "1password"
+cask "rambox"
+cask "claude-code"
+
+# Mac App Store apps
+mas "Keynote", id: 409183694
+mas "Slack", id: 803453959
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "XCode", id: 497799835
+mas "Skitch", id: 490505997
+mas "Kindle", id: 405399194
+mas "Runcat", id: 1429033973
+mas "toggl-track", id: 1291898086
