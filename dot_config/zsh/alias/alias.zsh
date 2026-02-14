@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 # include functions
-source $HOME/.dotfiles/zsh/alias/functions.zsh
+source $HOME/.config/zsh/alias/functions.zsh
 
 ###
 # Checking OS
@@ -80,10 +80,6 @@ alias gco="git checkout"
 alias wip="git commit --allow-empty -m wip"
 alias gb="git branch"
 alias cdgr='cd $(git rev-parse --show-toplevel)'
-
-# Development for git init
-alias readmeinit="cp $HOME/.dotfiles/template/README_template.md ./README.md"
-alias licenseinit="cat $HOME/.dotfiles/template/LICENSE.txt | sed -e s/YEAR_POSITION/\`date +\"%Y\"\`/ >> ./LICENSE.txt"
 
 # Docker
 alias docker-ps-name="docker ps | awk '{print \$NF}'"

@@ -1,0 +1,11 @@
+[user]
+{{- if hasKey . "git_user_name" }}
+  name  = {{ .git_user_name }}
+{{- else }}
+  name  = YOUR_GIT_NAME
+{{- end }}
+{{- if hasKey . "git_email" }}
+  email = {{ .git_email }}
+{{- else }}
+  email = YOUR_GIT_EMAIL
+{{- end }}

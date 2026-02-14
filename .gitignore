@@ -1,0 +1,7 @@
+# Chezmoi - ignore files with actual secrets
+.chezmoidata.toml
+.chezmoidata.yaml
+.chezmoidata.json
+
+# Generated files (if any)
+*.local

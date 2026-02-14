@@ -308,18 +308,18 @@ setopt hist_reduce_blanks
 ###
 
 # read functions
-source $HOME/.dotfiles/zsh/functions/keybind.zsh
+source $HOME/.config/zsh/functions/keybind.zsh
 zle -N my_enter
 bindkey '^m' my_enter
 
 # alias読み込み
-source $HOME/.dotfiles/zsh/alias/alias.zsh
+source $HOME/.config/zsh/alias/alias.zsh
 
 # directory色付け
 if [ -x "`which dircolors`" ]; then
-  eval $(dircolors $HOME/.dotfiles/zsh/lib/dircolors.ansi-universal)
+  eval $(dircolors $HOME/.config/zsh/lib/dircolors.ansi-universal)
 elif [ -x "`which gdircolors`" ]; then
-  eval $(gdircolors $HOME/.dotfiles/zsh/lib/dircolors.ansi-universal)
+  eval $(gdircolors $HOME/.config/zsh/lib/dircolors.ansi-universal)
 fi
 
 ###
@@ -391,15 +391,6 @@ fi
 ###
 # PATH
 ###
-# オリジナルコマンド
-export PATH="$HOME/.dotfiles/zsh/bin:$PATH"
-
-# Local bin files
-export PATH="$HOME/.dotfiles/local:$PATH"
-
-# 外部パスファイルの読み込み
-source $HOME/.zsh_own_config
-source $HOME/.zsh_alias
 
 # Homebrew
 if [ -e /opt/homebrew ]; then
