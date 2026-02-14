@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+echo "📦 Installing zinit plugins..."
+
+# Check if zinit is installed
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [ ! -d "${ZINIT_HOME}" ]; then
+  echo "⚠️  zinit is not installed, skipping plugin installation"
+  exit 0
+fi
+
+# Install plugins using zinit
+echo "  - Installing azu/ni.zsh..."
+zsh -c "
+  ZINIT_HOME=\"${ZINIT_HOME}\"
+  source \"\${ZINIT_HOME}/zinit.zsh\"
+  zinit light azu/ni.zsh
+"
+
+echo "✨ zinit plugins installation completed!"
