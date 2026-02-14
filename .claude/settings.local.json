@@ -3,7 +3,8 @@
     "allow": [
       "Bash(chezmoi:*)",
       "Bash(ls:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(brew list:*)"
     ]
   }
 }
