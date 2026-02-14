@@ -1,0 +1,2 @@
+# Ignore local settings (per-machine configuration)
+.claude/settings.local.json
