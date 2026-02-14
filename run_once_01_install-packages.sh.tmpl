@@ -32,7 +32,11 @@ brew bundle --file="$HOME/.config/homebrew/Brewfile"
 
 # Setup auto-update
 echo "⚙️  Setting up Homebrew auto-update..."
-brew autoupdate start
+if brew autoupdate status | grep -q "not configured"; then
+  brew autoupdate start
+else
+  echo "✅ Homebrew auto-update is already configured"
+fi
 
 echo "✨ Homebrew setup completed!"
 
