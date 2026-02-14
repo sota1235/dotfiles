@@ -1,3 +1,11 @@
 {
-  "mcpServers": {}
+  "mcpServers": {},
+  "permissions": {
+    "allow": [
+      {
+        "tool": "Bash",
+        "prompt": "npm ls"
+      }
+    ]
+  }
 }
