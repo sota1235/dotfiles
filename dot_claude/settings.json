@@ -2,22 +2,10 @@
   "mcpServers": {},
   "permissions": {
     "allow": [
-      {
-        "tool": "Bash",
-        "prompt": "npm ls"
-      },
-      {
-        "tool": "Bash",
-        "prompt": "pnpm list"
-      },
-      {
-        "tool": "Bash",
-        "prompt": "pnpm view"
-      },
-      {
-        "tool": "Bash",
-        "prompt": "git log:*"
-      }
+      "Bash(npm ls:*)",
+      "Bash(pnpm list:*)",
+      "Bash(pnpm view:*)",
+      "Bash(git log:*)"
     ]
   }
 }
