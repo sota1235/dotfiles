@@ -23,3 +23,11 @@ call dein#end()
 if dein#check_install()
   call dein#install()
 endif
+
+" プラグインを読み込む
+filetype plugin indent on
+syntax enable
+
+" カラースキームを設定（dein#end()の後に設定するのが標準）
+set background=dark
+colorscheme hybrid

@@ -3,6 +3,7 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
+merged = 0
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'

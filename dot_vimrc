@@ -275,12 +275,6 @@ syntax enable
 let java_highlight_all=1
 let java_highlight_functions="style"
 let java_allow_cpp_keywords=1
-set background=dark
-" deinのプラグイン読み込み完了後にカラースキームを設定
-augroup MyColorScheme
-  autocmd!
-  autocmd VimEnter * nested colorscheme hybrid
-augroup END
 function! ActivateInvisibleIndicator()
   hi SpecialKey cterm=NONE ctermfg=darkgray guifg=darkgray
   hi ZenkakuSpace cterm=underline ctermfg=red gui=underline guifg=#FF0000
