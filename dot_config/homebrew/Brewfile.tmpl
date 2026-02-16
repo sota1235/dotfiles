@@ -32,7 +32,9 @@ brew "awscli"
 brew "gh"
 brew "imagemagick"
 brew "deno"
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 brew "yt-dlp"
+{{- end }}
 brew "jnv"
 
 # Development tools
@@ -48,12 +50,16 @@ brew "mise"
 brew "hashicorp/tap/terraform"
 
 # Mac App Store CLI
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 brew "mas"
+{{- end }}
 
 # GUI applications
 cask "iterm2"
 cask "docker-desktop"
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 cask "google-chrome"
+{{- end }}
 cask "google-japanese-ime"
 cask "appcleaner"
 cask "spotify"
@@ -62,24 +68,36 @@ cask "jetbrains-toolbox"
 cask "karabiner-elements"
 cask "alfred"
 cask "firefox"
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 cask "vlc"
 cask "dropbox"
+{{- end }}
 cask "gcloud-cli"
 cask "clipy"
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 cask "audacity"
+{{- end }}
 cask "elgato-stream-deck"
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 cask "1password"
+{{- end }}
 cask "1password-cli"
 cask "rambox"
 cask "claude-code"
 cask "shottr"
 
 # Mac App Store apps
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 mas "Keynote", id: 409183694
 mas "Slack", id: 803453959
+{{- end }}
 mas "LINE", id: 539883307
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 mas "Magnet", id: 441258766
+{{- end }}
 mas "XCode", id: 497799835
 mas "Kindle", id: 302584613
+{{- if eq .chezmoi.hostname "sota1235-TrueYourself" }}
 mas "Runcat", id: 1429033973
 mas "toggl-track", id: 1291898086
+{{- end }}
