@@ -5,3 +5,6 @@
 
 # Generated files (if any)
 *.local
+
+# Claude Code settings
+.claude/settings.local.json
