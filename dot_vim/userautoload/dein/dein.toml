@@ -27,4 +27,4 @@ repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
 repo = 'Quramy/tsuquyomi'
-on_tf = ['typescript']
+on_ft = ['typescript']
