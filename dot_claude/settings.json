@@ -5,6 +5,7 @@
       "Bash(npm ls:*)",
       "Bash(pnpm list:*)",
       "Bash(pnpm view:*)",
+      "Bash(pnpm why:*)",
       "Bash(git log:*)"
     ]
   },
