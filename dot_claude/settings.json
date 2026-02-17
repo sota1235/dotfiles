@@ -6,7 +6,8 @@
       "Bash(pnpm list:*)",
       "Bash(pnpm view:*)",
       "Bash(pnpm why:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(terraform fmt)"
     ]
   },
   "hooks": {
