@@ -20,11 +20,5 @@ else
   title="⚠️ Claude Code: Task Failed"
 fi
 
-# Send notification using terminal-notifier
-if command -v terminal-notifier &> /dev/null; then
-  terminal-notifier \
-    -title "$title" \
-    -message "$description" \
-    -sound "default" \
-    -group "claude-code"
-fi
+# Send notification using osascript
+osascript -e "display notification \"$description\" with title \"$title\" sound name \"default\""
