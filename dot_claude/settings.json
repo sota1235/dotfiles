@@ -6,6 +6,9 @@
       "Bash(pnpm list:*)",
       "Bash(pnpm view:*)",
       "Bash(pnpm why:*)",
+      "Bash(npm view:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm show:*)",
       "Bash(git log:*)",
       "Bash(terraform fmt)"
     ]
