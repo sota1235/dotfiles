@@ -3,6 +3,11 @@
   "permissions": {
     "allow": [
       "Bash(npm ls:*)",
+      "Bash(find:*)",
+      "Bash(wc:*)",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(tail:*)",
       "Bash(pnpm list:*)",
       "Bash(pnpm view:*)",
       "Bash(pnpm why:*)",
@@ -10,7 +15,14 @@
       "Bash(npm ls:*)",
       "Bash(npm show:*)",
       "Bash(git log:*)",
-      "Bash(terraform fmt)"
+      "Bash(git diff:*)",
+      "Bash(git status:*)",
+      "Bash(git fetch --prune:*)",
+      "Bash(git worktree list:*)",
+      "Bash(terraform fmt)",
+      "WebFetch(domain:docs.github.com)",
+      "WebFetch(domain:anthropic.com)",
+      "WebFetch(domain:docs.anthropic.com)"
     ]
   },
   "hooks": {
