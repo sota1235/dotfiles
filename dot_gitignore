@@ -42,7 +42,7 @@ dump.rdb
 
 # Claude Code
 .claude/settings.local.json
-.claude/worktress
+.claude/worktrees
 
 # serena
 .serena/
