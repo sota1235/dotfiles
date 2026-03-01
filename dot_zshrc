@@ -392,6 +392,7 @@ fi
 # Homebrew
 if [ -e /opt/homebrew ]; then
   export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/sbin:$PATH"
 fi
 
 # http://qiita.com/kwgch/items/445a230b3ae9ec246fcb
