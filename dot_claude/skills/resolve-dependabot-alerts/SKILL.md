@@ -1,20 +1,15 @@
 ---
+name: resolve-dependabot-alerts
+description: 現在のリポジトリのDependabot alertsを自動的に取得し、可能な範囲で修正を試み、Pull Requestを作成します。
+disable-model-invocation: true
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(gh pr:*), Bash(gh api:*), Bash(npm show), Bash(find:*), Bash(npm ls:*)
-description: Resolve dependabot alerts
 ---
 
-# Claude コマンド: Resolve Dependabot Alerts
+# Resolve Dependabot Alerts
 
-このコマンドは、現在作業しているリポジトリのDependabot alertsを自動的に取得し、可能な範囲で修正を試み、Pull Requestを作成します。
+このスキルは、現在作業しているリポジトリのDependabot alertsを自動的に取得し、可能な範囲で修正を試み、Pull Requestを作成します。
 
-## 使い方
-
-Dependabot alertsを解決するには、次のように入力してください:
-```
-/resolve-dependabot-alerts
-```
-
-## このコマンドの動作
+## このスキルの動作
 
 1. **Dependabot alertsの取得**:
    - `gh api` を使用して現在のリポジトリのDependabot alertsを全て取得
@@ -117,7 +112,7 @@ gh api repos/{owner}/{repo}/dependabot/alerts \
 
 ## 重要な注意事項
 
-- **GitHub CLI (`gh`) が必要**: このコマンドは `gh` コマンドを使用するため、事前に `gh auth login` でログインしておく必要があります
+- **GitHub CLI (`gh`) が必要**: このスキルは `gh` コマンドを使用するため、事前に `gh auth login` でログインしておく必要があります
 - **テストの実行**: 可能な限りテストを実行して、変更が既存の機能を壊さないことを確認します
 - **段階的な対応**: すべてのalertを一度に修正するのではなく、修正可能なものから順番に対応します
 - **手動確認の推奨**: 自動修正後も、変更内容を手動で確認することを推奨します
