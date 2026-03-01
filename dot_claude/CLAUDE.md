@@ -15,19 +15,12 @@ This file provides global guidance to Claude Code across all projects.
 - 意味のある変数名・関数名を使用
 - コメントは必要最小限にし、コード自体を自己説明的にする
 
-### Git コミットメッセージ
-- プレフィックスを使用: `add:`, `modify:`, `fix:`, `remove:` など
-- 簡潔で具体的な内容を記載
-- 必要に応じて詳細を本文に記載
+## セキュリティ
 
-### GitHub Pull Request
-- **必ずdraft pull requestとして作成すること**
-- **自分自身をassigneeに追加すること**
-- **日本語で作成すること**（タイトル、本文ともに）
-- issueを元に作成したpull requestの場合は、`resolve`、`fixes`、`closes`などのキーワードとともにissue linkを本文に貼ること
-  - 例: `Resolves #123` または `Fixes #456`
-- pull request templateがある場合には必ずそれを利用すること
-  - 複数のテンプレートがある場合は最も適したtemplateを選択してください
+- **認証情報（APIキー、トークン、パスワード等）をコードにハードコードしてはならない**
+- **認証情報を含むファイル（`.env`、`credentials.json`等）をgitにコミットしてはならない**
+- 認証情報は環境変数、シークレットマネージャー、または`.env`ファイル（`.gitignore`で除外済み）経由で扱うこと
+- コードレビューやdiff確認時に認証情報の混入がないか常に注意すること
 
 ## ツール・環境
 
