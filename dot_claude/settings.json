@@ -2,12 +2,12 @@
   "mcpServers": {},
   "permissions": {
     "allow": [
-      "Bash(npm ls:*)",
       "Bash(find:*)",
       "Bash(wc:*)",
       "Bash(cat:*)",
       "Bash(tree:*)",
       "Bash(tail:*)",
+      "Bash(ls:*)",
       "Bash(pnpm list:*)",
       "Bash(pnpm view:*)",
       "Bash(pnpm why:*)",
@@ -19,10 +19,12 @@
       "Bash(git status:*)",
       "Bash(git fetch --prune:*)",
       "Bash(git worktree list:*)",
+      "Bash(git checkout:*)",
       "Bash(terraform fmt)",
       "WebFetch(domain:docs.github.com)",
       "WebFetch(domain:anthropic.com)",
-      "WebFetch(domain:docs.anthropic.com)"
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:docs.npmjs.com)"
     ]
   },
   "hooks": {
