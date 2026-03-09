@@ -41,4 +41,8 @@ dump.rdb
 .nvmrc
 
 # Claude Code
-settings.local.json
+.claude/settings.local.json
+.claude/worktrees
+
+# serena
+.serena/
