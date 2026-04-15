@@ -24,7 +24,7 @@
       "WebFetch(domain:anthropic.com)",
       "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:docs.npmjs.com)",
-      "WebFetch(docs.renovatebot.com)"
+      "WebFetch(domain:docs.renovatebot.com)"
     ]
   },
   "hooks": {
