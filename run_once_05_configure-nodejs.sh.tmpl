@@ -16,6 +16,9 @@ if command -v pnpm > /dev/null 2>&1; then
   echo "🌐 Setting pnpm registry to npm.flatt.tech..."
   pnpm config set registry https://npm.flatt.tech/ --global
 
+  echo "🚫 Disabling pnpm install scripts..."
+  pnpm config set ignore-scripts true --global
+
   echo "✅ pnpm configured"
 else
   echo "⚠️  pnpm is not installed, skipping pnpm configuration"
@@ -31,6 +34,9 @@ if command -v npm > /dev/null 2>&1; then
 
   echo "🔑 Setting npm auth token for npm.flatt.tech..."
   npm config set "//npm.flatt.tech/:_authToken" "{{ onepasswordRead "op://API keys/takumi guard token/password" }}"
+
+  echo "🚫 Disabling npm install scripts..."
+  npm config set ignore-scripts true
 
   echo "✅ npm configured"
 else
