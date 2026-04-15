@@ -1,0 +1,52 @@
+#!/bin/bash
+{{ if eq .chezmoi.os "darwin" -}}
+
+set -e
+
+echo "📦 Configuring Node.js package managers..."
+
+# Configure pnpm
+if command -v pnpm > /dev/null 2>&1; then
+  echo "🔒 Setting pnpm trust-policy to no-downgrade..."
+  pnpm config set trust-policy no-downgrade --global
+
+  echo "🕐 Setting pnpm min-release-age to 7 days..."
+  pnpm config set min-release-age 10080 --global
+
+  echo "🌐 Setting pnpm registry to npm.flatt.tech..."
+  pnpm config set registry https://npm.flatt.tech/ --global
+
+  echo "✅ pnpm configured"
+else
+  echo "⚠️  pnpm is not installed, skipping pnpm configuration"
+fi
+
+# Configure npm
+if command -v npm > /dev/null 2>&1; then
+  echo "🌐 Setting npm registry to npm.flatt.tech..."
+  npm config set registry https://npm.flatt.tech/
+
+  echo "🕐 Setting npm min-release-age to 7 days..."
+  npm config set min-release-age 7
+
+  echo "🔑 Setting npm auth token for npm.flatt.tech..."
+  npm config set "//npm.flatt.tech/:_authToken" "{{ onepasswordRead "op://API keys/takumi guard token/password" }}"
+
+  echo "✅ npm configured"
+else
+  echo "⚠️  npm is not installed, skipping npm configuration"
+fi
+
+# Configure yarn
+if command -v yarn > /dev/null 2>&1; then
+  echo "🌐 Setting yarn registry to npm.flatt.tech..."
+  yarn config set npmRegistryServer https://npm.flatt.tech
+
+  echo "✅ yarn configured"
+else
+  echo "⚠️  yarn is not installed, skipping yarn configuration"
+fi
+
+echo "✨ Node.js package manager configuration completed!"
+
+{{ end -}}

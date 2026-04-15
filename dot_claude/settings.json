@@ -1,5 +1,4 @@
 {
-  "mcpServers": {},
   "permissions": {
     "allow": [
       "Bash(find:*)",
@@ -24,8 +23,8 @@
       "WebFetch(domain:docs.github.com)",
       "WebFetch(domain:anthropic.com)",
       "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(docs.renovatebot.com)",
-      "WebFetch(domain:docs.npmjs.com)"
+      "WebFetch(domain:docs.npmjs.com)",
+      "WebFetch(docs.renovatebot.com)"
     ]
   },
   "hooks": {
@@ -54,5 +53,6 @@
   },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true
-  }
+  },
+  "mcpServers": {}
 }

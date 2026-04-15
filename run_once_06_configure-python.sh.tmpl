@@ -1,0 +1,33 @@
+#!/bin/bash
+{{ if eq .chezmoi.os "darwin" -}}
+
+set -e
+
+echo "🐍 Configuring Python package managers..."
+
+# Configure pip
+if command -v pip > /dev/null 2>&1; then
+  echo "🌐 Setting pip index-url to pypi.flatt.tech..."
+  pip config set global.index-url "https://token:{{ onepasswordRead "op://API keys/takumi guard token/password" }}@pypi.flatt.tech/simple/"
+
+  echo "✅ pip configured"
+else
+  echo "⚠️  pip is not installed, skipping pip configuration"
+fi
+
+# Configure poetry
+if command -v poetry > /dev/null 2>&1; then
+  echo "🌐 Adding takumi-guard source to poetry..."
+  poetry source add --priority=primary takumi-guard https://pypi.flatt.tech/simple/
+
+  echo "🔑 Setting poetry auth for takumi-guard..."
+  poetry config http-basic.takumi-guard token "{{ onepasswordRead "op://API keys/takumi guard token/password" }}"
+
+  echo "✅ poetry configured"
+else
+  echo "⚠️  poetry is not installed, skipping poetry configuration"
+fi
+
+echo "✨ Python package manager configuration completed!"
+
+{{ end -}}

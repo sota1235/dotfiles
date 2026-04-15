@@ -431,4 +431,7 @@ if which kubectl > /dev/null 2>&1 ; then
   source <(kubectl completion zsh)
 fi
 
+# uv
+export UV_INDEX_URL="https://token:{{ onepasswordRead "op://API keys/takumi guard token/password" }}@pypi.flatt.tech/simple/"
+
 
