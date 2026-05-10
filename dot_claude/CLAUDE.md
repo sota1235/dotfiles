@@ -28,3 +28,4 @@ This file provides global guidance to Claude Code across all projects.
 - エディタ: vim
 - バージョン管理: git
 - パッケージマネージャ (macOS): Homebrew
+- `rm` コマンドは `trash` コマンドへのエイリアスが設定されている。そのため `-r` や `-f` といったオプションは使用できない
